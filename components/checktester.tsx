@@ -1,5 +1,6 @@
 import { FC, Fragment } from "react";
 import { Col } from "react-bootstrap";
+// import '../styles/modules/check.css'
 
 export type checkerbox = {
   id: string,

@@ -1,12 +1,31 @@
-import React, { FC, ReactNode } from 'react'
+import { FC, PropsWithChildren} from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
+import LayoutStyles from '../../styles/modules/Layout.module.sass'
+import classNames from 'classnames'
+import Head from 'next/head'
+import Header from '../shared/header'
 
-interface LayoutProps {
-  children: ReactNode
-}
+export type LayoutProps = {
+  pageTitle?: string
+} 
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout: FC<PropsWithChildren<LayoutProps>> = ({children}) => {
   return (
-    <div>{children}</div>
+    <div className={classNames(LayoutStyles.pageContainer)}>
+      <Head>
+        <title>Tesis-App</title>
+        <meta name="description" content='cosito' />
+      </Head>
+      <Header />
+      <div>
+        <Container fluid>
+          <Row>
+            <Col>{children}</Col>
+          </Row>
+        </Container>
+      </div>
+      {/* <Footer /> */}
+    </div>
   )
 }
 

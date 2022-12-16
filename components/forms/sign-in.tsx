@@ -4,8 +4,9 @@ import React from 'react'
 import { Container, Button, Row, Col, FormGroup } from 'react-bootstrap'
 
 const SignIn = () => {
-  const createSession = () => {
-    localStorage.setItem("session", "sesionLogeada");
+  const createSession = async () => {
+    await localStorage.setItem("session", "sesionLogeada");
+    window.location.reload();
   }
 
   return (

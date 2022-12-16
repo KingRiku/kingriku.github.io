@@ -1,10 +1,11 @@
-import React, { Fragment, useState } from "react";
+import { NextPage } from "next";
+import React, { useState } from "react";
 import { Card, Col, Container, Image, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import { artist_collections } from "../data/followed_artist";
-import Header from "./components/header";
+import Layout from '../components/utils/layout';
 
-const FollowedArtist = () => {
+const FollowedArtist: NextPage = () => {
   const [onSearchText, setSearchText] = useState('');
 
   // useEffect(() => {
@@ -58,11 +59,11 @@ const FollowedArtist = () => {
     setSearchText(e.target.value);
   };
   return (
-    <Fragment>
+    <Layout>
       <Container>
-        <Row>
+        {/* <Row>
           <Header />
-        </Row>
+        </Row> */}
         <Row>
           <Col xs='12'>
             <h6>Marca</h6>
@@ -100,7 +101,7 @@ const FollowedArtist = () => {
           </Col>
         </Row>
       </Container>
-    </Fragment>
+    </Layout>
   );
 }
 

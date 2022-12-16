@@ -1,18 +1,18 @@
 import { useRouter } from 'next/router'
-import React, { Fragment } from 'react'
-import { Card, Col, Image, Row } from 'react-bootstrap'
-import Header from '../../components/header'
+import React from 'react'
+import { Card, Col, Row } from 'react-bootstrap'
 import { artist } from '../../../data/artist'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import Layout from '../../../components/utils/layout'
 
 
 const ArtistPage = () => {
   const router = useRouter()
   const name = router.query.name as string
   return (
-    <Fragment>
-      <Header/>
+    <Layout>
+      {/* <Header/> */}
       <h1>Artist: {name}</h1>
       <Row>
         <Col xs='6'>
@@ -43,7 +43,7 @@ const ArtistPage = () => {
           </Card> */}
         </Col>
       </Row>
-    </Fragment>
+    </Layout>
   )
 }
 
