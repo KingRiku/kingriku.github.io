@@ -1,4 +1,3 @@
-import { Inter } from '@next/font/google'
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import HomePage from '../components/forms/interest';
