@@ -1,4 +1,5 @@
-import { FC, Fragment } from "react";
+import { Field } from "formik";
+import { FC, Fragment, useState } from "react";
 import { Col } from "react-bootstrap";
 // import '../styles/modules/check.css'
 
@@ -6,6 +7,7 @@ export type checkerbox = {
   id: string,
   value: string,
   text: string,
+  fname: string
 } 
 
 type checkboxProp = {
@@ -13,11 +15,12 @@ type checkboxProp = {
 }
 
 const NewComponent: FC<checkboxProp> = ({checkerbox}) => {
+  
     return (
       <Fragment>
         <Col className="col-sm-3 shadow">
           <div className="quiz_card_area">
-            <input className="quiz_checkbox" type="checkbox" id={checkerbox.id} defaultValue={checkerbox.value}/>
+            <Field className="quiz_checkbox" type="checkbox" name={checkerbox.fname} id={checkerbox.id}/>
             <div className="single_quiz_card">
               <div className="quiz_card_content">
                 <div className="quiz_card_icon">

@@ -4,12 +4,15 @@ import { MusicaStiles } from '../../data/musical_style'
 import NewComponent, { checkerbox } from '../checktester'
 // import Footer from './components/footer'
 import Link from 'next/link'
-import SelectionNav from '../selection_nav'
+import SelectionNav from '../selection_groups'
 import { NextPage } from 'next'
-import Home from '../../pages/home'
+// import Home from '../../pages/home'
+import Welcome from '../../pages/welcome'
+import { useRouter } from 'next/router'
 
 const HomePage: NextPage = () => {
   const [formed, setFormed] = useState(true)
+  const router = useRouter()
 
   const selectionForm = () => {
     setFormed(false)
@@ -28,16 +31,16 @@ const HomePage: NextPage = () => {
             {
               formed ? 
                 <SelectionNav />
-              : <Home/>
+              : <Link href='/welcome' />
             }
           </Row>
-          <Row>
+          {/* <Row>
             <Col className='d-flex justify-content-end'>
               <Link href={`/home`}>
                 <Button variant="dark" onClick={() => (selectionForm())}>Siguente</Button>
               </Link>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
         {/* <Footer /> */}
       </div>
