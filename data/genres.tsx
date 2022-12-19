@@ -3,7 +3,6 @@ export const genres = [
     id: 1,
     name: 'Gucci',
     fav: false,
-    // image: 'https://images.squarespace-cdn.com/content/v1/5a96d42ab10598a6d24b05aa/1566841063190-ZX178FN496BO3PEEFV1I/miu+miu+beauty+logo.png?format=1000w',
     image: 'https://www.rollingstone.co.uk/wp-content/uploads/sites/2/2022/11/Screenshot-2022-11-03-at-15.25.00-1024x636.png',
     desc: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,'
   },

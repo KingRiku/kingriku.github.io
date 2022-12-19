@@ -4,13 +4,14 @@ import EventCards from '../components/event_cards'
 import Histories from '../components/histories'
 import Layout from '../components/utils/layout'
 import { artist as ortors } from '../data/artist'
+import { genres } from '../data/genres'
 
 const Home = () => {
   const [artist, setArtist] = useState<any[]>([])
   const [artistas, setArtistas] = useState<any[]>([])
 
   const script = async () => {
-    const artist = await (JSON.parse(localStorage.getItem('artist') as string))
+    const artist = await (JSON.parse(localStorage.getItem('artist') as string) ?? '')
     setArtist(artist)
   }
 
@@ -49,8 +50,13 @@ const Home = () => {
             </Col>
           </Row>
           <Row>
-            <EventCards />
-            {/* <Collections /> */}
+            {
+              genres.map((item, index) => (
+                <Col xs='12' lg='12' key={index}>
+                  <EventCards genres={item} />
+                </Col>
+              ))
+            }
           </Row>
         </Container>
     </Layout>
