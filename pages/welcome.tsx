@@ -18,7 +18,7 @@ const Welcome: NextPage = () => {
     }
 
   }, [signed])
-  console.log(signed)
+
   return (
     <Layout>
       {

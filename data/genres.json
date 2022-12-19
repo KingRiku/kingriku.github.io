@@ -1,0 +1,11 @@
+{
+  "genres": [
+    {
+      "id": 1,
+      "name": "Gucci",
+      "image": "https://www.rollingstone.co.uk/wp-content/uploads/sites/2/2022/11/Screenshot-2022-11-03-at-15.25.00-1024x636.png",
+      "desc": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s",
+      "fav": false
+    }
+  ]
+}
