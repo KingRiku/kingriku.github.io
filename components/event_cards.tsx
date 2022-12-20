@@ -1,18 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { ChangeEvent, FC, FormEvent, Fragment, useEffect, useState } from 'react'
+import React, { ChangeEvent, FC, FormEvent, Fragment, useEffect, useLayoutEffect, useState } from 'react'
 import { Card, Col, Row, Form, Button } from 'react-bootstrap'
 import { genres } from '../data/genres'
 import { faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 // import { genres } from '../data/genres.json'
 
-type MarkTypes = {
+export type MarkTypes = {
   id: number;
   name: string;
-  image: string;
   desc: string;
   fav: boolean
 }
-type genresData ={
+export type genresData ={
   id: number,
   name: string,
   fav: boolean,
@@ -24,14 +23,14 @@ type genresProps = {
 } 
 
 const EventCards: FC<genresProps> = ({ genres }) => {
-  const [liked, setLiked] = useState({});
-  const [clicked, setClicked] = useState(false);
+  const [liked, setLiked] = useState([]);
+  const [clicked, setClicked] = useState();
   // const [text, setText] = useState(JSON.stringify(ModifierJson, null, 2));
 
   const onHeartClick = async (item: MarkTypes) => {
     const prebody = []
-    const body =  {
-      id: item.name,
+    const body: MarkTypes =  {
+      id: item.id,
       name: item.name,
       desc: item.desc,
       fav: true
@@ -43,18 +42,22 @@ const EventCards: FC<genresProps> = ({ genres }) => {
       sessionStorage.setItem("Artist_list", JSON.stringify(prebody));
     } else {
       const queso = JSON.parse(storage)
-      console.log('soyqueso',queso)
-      queso.push(body)
-      sessionStorage.setItem("Artist_list", JSON.stringify(queso));
+    
+      if(queso.filter( (q: MarkTypes) => (q.id === body.id) ).length < 1){
+        queso.push(body)
+        sessionStorage.setItem("Artist_list", JSON.stringify(queso));
+      } else {
+        console.log('repetido gg eazuy')
+      }
+
     }
-    // setClicked(!clicked);
   };
-  useEffect(() => {
+  useLayoutEffect(() => {
     const storage = sessionStorage.getItem("Artist_list");
     if(storage ==  null) {
-      setLiked('')
+      setLiked([])
     } else {
-      const gatito = JSON.parse(storage ?? '') 
+      const gatito = JSON.parse(storage ?? '')
       setLiked(gatito)
     }
   }, [])
@@ -76,7 +79,7 @@ const EventCards: FC<genresProps> = ({ genres }) => {
                     type='button'
                     style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}
                     onClick={() => onHeartClick(genres)}>
-                    {clicked ? <FontAwesomeIcon style={{ color: '#EE5EC7' }} size='lg' icon={faHeart} />: <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faHeart} />}
+                    {liked.filter( (q: MarkTypes) => (q.id === genres.id) ).length < 1 ? <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faHeart} />: <FontAwesomeIcon style={{ color: '#EE5EC7' }} size='lg' icon={faHeart} />}
                     {/* <Icon name={`${clicked ? "heart-fill" : "heart"}`}></Icon> */}
                   </Button>
                   {/* <HearthCheckbox genres={item.name}/> */}
