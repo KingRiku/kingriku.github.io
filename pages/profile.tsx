@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Col, Container, Row, Image, Button } from 'react-bootstrap'
 import ProfileImage from '../assets/profile.png'
 import SideCards from '../components/side_cards'
 import Layout from '../components/utils/layout'
 
 const Profile = () => {
+  const [liked, setLiked] = useState([]);
+
+  useEffect(() => {
+    const storage = sessionStorage.getItem("Artist_list");
+    if(storage ==  null) {
+      setLiked([])
+    } else {
+      const gatito = JSON.parse(storage ?? '')
+      setLiked(gatito)
+    }
+  }, [])
+
   return (
     <Layout>
       <Container>
@@ -28,7 +40,7 @@ const Profile = () => {
           </Col>
         </Row>
         <Row className='mb-3'>
-          <SideCards></SideCards>
+          <SideCards images={liked}></SideCards>
         </Row>
         <Row className='mb-3'>
           <Col lg='12' className='d-flex justify-content-center'>

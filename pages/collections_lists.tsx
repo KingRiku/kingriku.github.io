@@ -76,27 +76,31 @@ const Collections = () => {
         </Row>
         <Row>
           <Col xs='12'>
-            <Slider {...settings}>
               {
                 collections.map((item, index) =>(
-                  <Card key={index}>
-                    <Card.Img src={item.image}>
-                    </Card.Img>
-                    <Card.Body>
-                      <Card.Title className="d-flex justify-content-center">
-                        Collección {item.name}
-                      </Card.Title>
-                      <Card.Title className="d-flex justify-content-center">
-                        {item.year}
-                      </Card.Title>
-                      <Card.Text className="d-flex justify-content-center">
-                        <a href="">ver mas...</a>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
+                  <Slider {...settings} key={index} className='mb-5'>
+                    {
+                      item.image.map(( item, index ) => (
+                        <Card key={index}>
+                          <Card.Img src={item.image}>
+                          </Card.Img>
+                          <Card.Body>
+                            <Card.Title className="d-flex justify-content-center">
+                              Collección {item.name}
+                            </Card.Title>
+                            <Card.Title className="d-flex justify-content-center">
+                              {item.year}
+                            </Card.Title>
+                            <Card.Text className="d-flex justify-content-center">
+                              <a href="">ver mas...</a>
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      ))
+                    }
+                  </Slider>
                 ))
               }
-            </Slider>
           </Col>
         </Row>
       </Container>

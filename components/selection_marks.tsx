@@ -10,14 +10,14 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 type SelectionsGroup = {
-  prada: boolean
-  saintlauren: boolean
-  luisvutton: boolean
-  miumiu: boolean
-  converse: boolean
-  dior: boolean
-  skoot: boolean
-  burbery: boolean
+  prada?: boolean
+  saintlauren?: boolean
+  luisvutton?: boolean
+  miumiu?: boolean
+  converse?: boolean
+  dior?: boolean
+  skoot?: boolean
+  burbery?: boolean
 }
 
 function SelectionMarks() {
@@ -42,7 +42,32 @@ function SelectionMarks() {
           burbery: false,
         }}
         onSubmit= { async (values) => {
-          addGroups(values)
+          let body: any = []
+          if(values.prada == true){
+            body.push({'name': 'prada'})
+          }
+          if(values.saintlauren == true){
+            body.push({'name': 'saintlauren'})
+          }
+          if(values.luisvutton == true){
+            body.push({'name': 'luisvutton'})
+          }
+          if(values.miumiu == true){
+            body.push({'name': 'miumiu'})
+          }
+          if(values.converse == true){
+            body.push({'name': 'converse'})
+          }
+          if(values.dior == true){
+            body.push({'name': 'dior'})
+          }
+          if(values.skoot == true){
+            body.push({'name': 'skoot'})
+          }
+          if(values.burbery == true){
+            body.push({'name': 'burbery'})
+          }
+          addGroups(body)
         }}
       >
       {() => (

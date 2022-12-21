@@ -1,13 +1,15 @@
-import { NextPage } from "next";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { Fragment, useState } from "react";
 import { Card, Col, Container, Image, Row } from "react-bootstrap";
 import Slider from "react-slick";
-import { artist_collections } from "../data/followed_artist";
-import Layout from '../components/utils/layout';
-import { artist } from "../data/artist";
-import Link from "next/link";
+import Layout from "../../../components/utils/layout";
+import { collections } from "../../../data/collections";
+// import Layout from "../components/utils/layout";
+// import { collections } from '../data/collections'
 
-const FollowedArtist: NextPage = () => {
+const MarksList = () => {
+  const router = useRouter()
+  const name = router.query.name as string
   const [onSearchText, setSearchText] = useState('');
 
   // useEffect(() => {
@@ -64,8 +66,8 @@ const FollowedArtist: NextPage = () => {
     <Layout>
       <Container>
         <Row>
-          <Col xs='12' className="d-flex justify-content-center mb-2 mt-2">
-            <h6><strong>Artists</strong></h6>
+          <Col xs='12' className="d-flex justify-content-center mt-2 mb-2">
+            <h6><strong>{name}</strong></h6>
           </Col>
           <Col xs='12' className="mb-3">
             <input
@@ -79,35 +81,36 @@ const FollowedArtist: NextPage = () => {
         </Row>
         <Row>
           <Col xs='12'>
-            {
-              artist_collections.map((item, index) => (
-                <Slider {...settings} key={index} className='mb-5'>
-                  {
-                    item.images.map((item, index) =>(
-                      <Card key={index}>
-                        <Card.Img src={item.img} style={{ maxHeight: '20rem' }} className='img-fluid'>
-                        </Card.Img>
-                        <Card.Body>
-                          <Card.Title className="d-flex justify-content-center">
-                            Collección {item.name}
-                          </Card.Title>
-                          <Card.Text className="d-flex justify-content-center">
-                            <Link href={`artist_closet/${item.fname}`}>
-                              ver mas...
-                            </Link>
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    ))
-                  }
-                </Slider>                
-              ))
-            }
+              {
+                collections.map((item, index) =>(
+                  <Slider {...settings} key={index} className='mb-5'>
+                    {
+                      item.image.map(( item, index ) => (
+                        <Card key={index}>
+                          <Card.Img src={item.image}>
+                          </Card.Img>
+                          <Card.Body>
+                            <Card.Title className="d-flex justify-content-center">
+                              Collección {item.name}
+                            </Card.Title>
+                            <Card.Title className="d-flex justify-content-center">
+                              {item.year}
+                            </Card.Title>
+                            <Card.Text className="d-flex justify-content-center">
+                              <a href="">ver mas...</a>
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      ))
+                    }
+                  </Slider>
+                ))
+              }
           </Col>
         </Row>
       </Container>
     </Layout>
-  );
+  )
 }
 
-export default FollowedArtist;
+export default MarksList

@@ -42,7 +42,32 @@ function SelectionNavs() {
           urbana: false,
         }}
         onSubmit= { async (values) => {
-          addGroups(values)
+          let body: any = []
+          if(values.pop == true){
+            body.push({'name': 'pop'})
+          }
+          if(values.kpop == true){
+            body.push({'name': 'kpop'})
+          }
+          if(values.ryb == true){
+            body.push({'name': 'ryb'})
+          }
+          if(values.hiphop == true){
+            body.push({'name': 'hiphop'})
+          }
+          if(values.trap == true){
+            body.push({'name': 'trap'})
+          }
+          if(values.regaeton == true){
+            body.push({'name': 'regaeton'})
+          }
+          if(values.rap == true){
+            body.push({'name': 'rap'})
+          }
+          if(values.urbana == true){
+            body.push({'name': 'urbana'})
+          }
+          addGroups(body)
         }}
       >
       {() => (

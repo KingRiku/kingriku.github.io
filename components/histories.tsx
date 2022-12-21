@@ -1,9 +1,13 @@
 import Link from 'next/link'
-import React, { Fragment } from 'react'
+import React, { Fragment, FC } from 'react'
 import { Card, Col, Container, Image, Row } from 'react-bootstrap'
-import { artist } from '../data/artist' 
+// import { artist } from '../data/artist' 
 
-const Histories = () => {
+type ArtistProps = {
+  artist: any[]
+}
+
+const Histories: FC<ArtistProps> = ({artist}) => {
   return (
     <Fragment>
       <Container>
@@ -23,6 +27,7 @@ const Histories = () => {
           }
           </Col>
         </Row>
+        <hr/>
       </Container>
     </Fragment>
   )

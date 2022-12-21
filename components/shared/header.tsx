@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <Fragment>
-      <Navbar expand="lg" variant="light" bg="light">
+      <Navbar expand="lg" style={{ backgroundColor: '#84C5EE' }}>
         <Container>
         <Button variant='light' onClick={handleShow}><FontAwesomeIcon style={{ color: 'black' }} icon={faBars} /></Button>
         <Navbar.Brand href="#">Aplicacion Tesis v2</Navbar.Brand>
