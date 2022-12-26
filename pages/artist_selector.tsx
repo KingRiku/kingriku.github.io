@@ -6,6 +6,7 @@ import React, { Fragment, useEffect, useLayoutEffect, useState } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import SideCard from '../components/side_card'
 import { artist } from '../data/artist'
+import { Marcas } from '../data/marcas'
 
 type SelectionsGroup = {
   bts: boolean
@@ -37,30 +38,37 @@ const ArtistSelector: NextPage = () => {
     setGroups(grupos)
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     script()
   }, [])
 
   useEffect(() => {
     let body = []
+    // for(let cos of marks) {
+    //   for(let art of artist){
+    //     if(art.fmarcas == cos.name) {
+    //       body.push(art)
+    //     }
+    //   }
+    // }
     for(let cos of marks) {
-      for(let art of artist){
-        if(art.fmarcas == cos.name) {
-          body.push(art)
+      for(let grp of groups) {
+        for(let art of artist) {
+          for(let fart of art.fmarcas){
+            console.log(fart)
+            if(art.style == grp.name && cos.name == fart) {
+              console.log(art)
+              body.push(art)  
+            }
+          }
         }
       }
     }
-    for(let grp of groups) {
-      for(let art of artist){
-        if(art.style == grp.name) {
-          body.push(art)
-        }
-      }
-    }
+
     let unique = body.filter((v, i, a) => a.indexOf(v) === i)
     setArtistas(unique)
   }, [marks])
-
+  console.log(artistas)
   return (
     <Fragment>
     {

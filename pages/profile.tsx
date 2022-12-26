@@ -16,7 +16,7 @@ const Profile = () => {
       setLiked(gatito)
     }
   }, [])
-
+  console.log(liked)
   return (
     <Layout>
       <Container>

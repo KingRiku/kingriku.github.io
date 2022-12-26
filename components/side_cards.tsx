@@ -39,7 +39,7 @@ const
     //   console.log(images)
     // }
   // }, [first])
-  
+  console.log('9i',images)
   return (
     <Fragment>
         <Row style={{ borderLeft:'1px', color:'#RG3477', borderBottom: '2px solid #000000' }}>
@@ -51,7 +51,7 @@ const
               {
                 images.map((item, index) => (
                   <Col key={index} xs={tamaño[index]}>
-                    <ImagesCustoms img={item} />
+                    <ImagesCustoms img={item.id} />
                   </Col>
                 ))
               }

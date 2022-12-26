@@ -9,10 +9,14 @@ import { genres } from '../data/genres'
 const Home = () => {
   const [artist, setArtist] = useState<any[]>([])
   const [artistas, setArtistas] = useState<any[]>([])
+  const [marcas, setMarcas] = useState<any[]>([])
+  const [marks, setMarks] = useState<any[]>([])
 
   const script = async () => {
     const artist = await (JSON.parse(localStorage.getItem('artist') as string) ?? '')
+    const marks = await (JSON.parse(localStorage.getItem('marks') as string) ?? '')
     setArtist(artist)
+    setMarks(marks)
   }
 
   useEffect(() => {
@@ -28,11 +32,20 @@ const Home = () => {
         }
       }
     }
-   
+    let bedy = []
+    for(let mar of marks) {
+      for(let gen of genres){
+        if(gen.fname == mar.name) {
+          console.log(gen)
+          bedy.push(gen)
+        }
+      }
+    }
+    setMarcas(bedy)
     let unique = body.filter((v, i, a) => a.indexOf(v) === i)
     setArtistas(unique)
   }, [artist])
-  
+  console.log(marcas)
   return (
     <Layout>
         <Container>
@@ -51,7 +64,7 @@ const Home = () => {
           </Row>
           <Row>
             {
-              genres.map((item, index) => (
+              marcas.map((item, index) => (
                 <Col xs='12' lg='12' key={index}>
                   <EventCards genres={item} />
                 </Col>

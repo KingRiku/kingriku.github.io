@@ -3,14 +3,14 @@ export const Marcas = [
   {
     id: '1',
     value:'1',
-    text: 'Prada',
-    fname: 'prada'
+    text: 'Gucci',
+    fname: 'gucci'
   },
   {
     id: '2',
     value:'2',
-    text: 'Saint Lauren',
-    fname: 'saintlauren'
+    text: 'Chanel',
+    fname: 'chanel'
   },
   {
     id: '3',
@@ -21,14 +21,14 @@ export const Marcas = [
   {
     id: '4',
     value:'4',
-    text: 'Miu Miu',
-    fname: 'miumiu'
+    text: 'Puma',
+    fname: 'puma'
   },
   {
     id: '5',
     value:'5',
-    text: 'Converse',
-    fname: 'converse'
+    text: 'Givenchy',
+    fname: 'givenchy'
   },
   {
     id: '6',
