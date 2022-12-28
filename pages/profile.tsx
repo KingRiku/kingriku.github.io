@@ -8,6 +8,7 @@ import Layout from '../components/utils/layout'
 const Profile = () => {
   const [likedMarks, setLikedMarks] = useState([]);
   const [likedArtist, setLikedArtist] = useState([]);
+  const [likedSellers, setLikedSellers] = useState([]);
 
   useEffect(() => {
     const storageMarks = sessionStorage.getItem("Artist_list");
@@ -23,7 +24,15 @@ const Profile = () => {
       setLikedArtist([])
     } else {
       const gatito = JSON.parse(storageArtist ?? '')
-      setLikedArtist(gatito)
+      setLikedSellers(gatito)
+    }
+
+    const storageSellers = sessionStorage.getItem("Seller_list");
+    if(storageArtist ==  null) {
+      setLikedSellers([])
+    } else {
+      const gatito = JSON.parse(storageSellers ?? '')
+      setLikedSellers(gatito)
     }
   }, [])
 
@@ -51,6 +60,9 @@ const Profile = () => {
         </Row>
         <Row className='mb-3'>
           <SideCards images={likedMarks}></SideCards>
+        </Row>
+        <Row className='mb-3'>
+          <SideCardsArtists images={likedArtist}></SideCardsArtists>
         </Row>
         <Row className='mb-3'>
           <SideCardsArtists images={likedArtist}></SideCardsArtists>
