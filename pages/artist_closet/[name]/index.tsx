@@ -22,7 +22,7 @@ const ArtistPage = () => {
       <Row className='mb-3'>
         <Col xs='6'>
           <Card style={{minHeight: '10rem', maxHeight:'10rem'}}>
-            <Card.Img src={artist?.find(e => e.name === name)?.image}></Card.Img>
+            {/* <Card.Img src={artist?.find(e => e.name === name)?.image}></Card.Img> */}
           </Card>
         </Col>
         <Col xs='6' className='d-flex align-items-center'>
@@ -46,7 +46,7 @@ const ArtistPage = () => {
       <Row className='mb-3'>
         <Col xs='6'>
           <Card style={{minHeight: '10rem', maxHeight:'10rem'}}>
-            <Card.Img src={artist?.find(e => e.name === name)?.image}></Card.Img>
+            {/* <Card.Img src={artist?.find(e => e.name === name)?.image ?? ''}></Card.Img> */}
           </Card>
         </Col>
         <Col xs='6' className='d-flex align-items-center'>

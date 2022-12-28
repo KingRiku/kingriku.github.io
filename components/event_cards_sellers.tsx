@@ -23,12 +23,12 @@ type genresProps = {
   genres: genresData
 } 
 
-const EventCards: FC<genresProps> = ({ genres }) => {
-  const [liked, setLiked] = useState([]);
-  const [clicked, setClicked] = useState();
+const EventCardsSellers: FC<genresProps> = ({ genres }) => {
+  const [clicked, setClicked] = useState<boolean>();
   // const [text, setText] = useState(JSON.stringify(ModifierJson, null, 2));
 
   const onHeartClick = async (item: MarkTypes) => {
+    setClicked(!clicked)
     const prebody = []
     const body: MarkTypes =  {
       id: item.id,
@@ -36,28 +36,31 @@ const EventCards: FC<genresProps> = ({ genres }) => {
       desc: item.desc,
       fav: true
     }
-    const storage = sessionStorage.getItem("Artist_list");
+    const storage = sessionStorage.getItem("Seller_list");
     if(storage == null){
       prebody.push(body)
-      sessionStorage.setItem("Artist_list", JSON.stringify(prebody));
+      sessionStorage.setItem("Seller_list", JSON.stringify(prebody));
     } else {
       const queso = JSON.parse(storage)
     
       if(queso.filter( (q: MarkTypes) => (q.id === body.id) ).length < 1){
         queso.push(body)
-        sessionStorage.setItem("Artist_list", JSON.stringify(queso));
+        sessionStorage.setItem("Seller_list", JSON.stringify(queso));
       } else {
       }
-
     }
   };
   useEffect(() => {
-    const storage = sessionStorage.getItem("Artist_list");
+    const storage = sessionStorage.getItem("Seller_list");
     if(storage ==  null) {
-      setLiked([])
+      console.log(storage)
     } else {
-      const gatito = JSON.parse(storage ?? '')
-      setLiked(gatito)
+      const collection = JSON.parse(storage)
+      const items = collection.filter( (q: any) => (q.id === genres.id) )
+      for(const i of items){
+        console.log(i)
+        setClicked(true)
+      }
     }
   }, [])
   
@@ -79,7 +82,7 @@ const EventCards: FC<genresProps> = ({ genres }) => {
                     type='button'
                     style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}
                     onClick={() => onHeartClick(genres)}>
-                    {liked.filter( (q: MarkTypes) => (q.id === genres.id) ).length < 1 ? <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faHeart} />: <FontAwesomeIcon style={{ color: '#EE5EC7' }} size='lg' icon={faHeart} />}
+                    { clicked ? <FontAwesomeIcon style={{ color: '#7EBBD5' }} icon={faHeart} />: <FontAwesomeIcon style={{ color: '#000000' }} icon={faHeart} /> }
                     {/* <Icon name={`${clicked ? "heart-fill" : "heart"}`}></Icon> */}
                   </Button>
                   {/* <HearthCheckbox genres={item.name}/> */}
@@ -107,4 +110,4 @@ const EventCards: FC<genresProps> = ({ genres }) => {
   )
 }
 
-export default EventCards
+export default EventCardsSellers

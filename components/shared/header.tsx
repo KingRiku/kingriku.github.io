@@ -38,7 +38,7 @@ const Header = () => {
               <h6 style={{ padding: '1rem' }} className='d-flex justify-content-center'>Artistas</h6>
             </Link>
             <hr style={{ color: '#D555A6', fontWeight: 'bold' }}></hr>
-            <Link href={'/collections_lists'}>
+            <Link href={'/re_sellers'}>
               <h6 style={{ padding: '1rem' }} className='d-flex justify-content-center'>Colecciones</h6>
             </Link>
             <hr style={{ color: '#D555A6', fontWeight: 'bold' }}></hr>

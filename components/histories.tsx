@@ -17,7 +17,7 @@ const Histories: FC<ArtistProps> = ({artist}) => {
             artist.map((item, index) => (
               <Col key={index} xs='3'>
                   <Link href={`/artist_closet/${item.name}`}>
-                    <Image key={index} src={item.image} alt='' style={{ maxHeight:'80px', maxWidth:'100px', padding: '.5rem' }} roundedCircle/>
+                    <Image key={index} src={item.image[0].img} alt='' style={{ maxHeight:'80px', maxWidth:'100px', padding: '.5rem' }} roundedCircle/>
                   </Link>
                 <Card.Body className='d-flex justify-content-center'>
                   <h6 style={{ overflow: 'hidden', position: 'relative', whiteSpace: 'nowrap', maxWidth: '100px'}}>{item.name}</h6>

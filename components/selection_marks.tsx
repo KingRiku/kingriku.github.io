@@ -10,11 +10,11 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 type SelectionsGroup = {
-  prada?: boolean
-  saintlauren?: boolean
+  gucci?: boolean
+  chanel?: boolean
   luisvutton?: boolean
-  miumiu?: boolean
-  converse?: boolean
+  puma?: boolean
+  givenchy?: boolean
   dior?: boolean
   skoot?: boolean
   burbery?: boolean
@@ -32,31 +32,31 @@ function SelectionMarks() {
     <Fragment>
      <Formik
         initialValues={{
-          prada: false,
-          saintlauren: false,
+          gucci: false,
+          chanel: false,
           luisvutton: false,
-          miumiu: false,
-          converse: false,
+          puma: false,
+          givenchy: false,
           dior: false,
           skoot: false,
           burbery: false,
         }}
         onSubmit= { async (values) => {
           let body: any = []
-          if(values.prada == true){
-            body.push({'name': 'prada'})
+          if(values.gucci == true){
+            body.push({'name': 'gucci'})
           }
-          if(values.saintlauren == true){
-            body.push({'name': 'saintlauren'})
+          if(values.chanel == true){
+            body.push({'name': 'chanel'})
           }
           if(values.luisvutton == true){
             body.push({'name': 'luisvutton'})
           }
-          if(values.miumiu == true){
-            body.push({'name': 'miumiu'})
+          if(values.puma == true){
+            body.push({'name': 'puma'})
           }
-          if(values.converse == true){
-            body.push({'name': 'converse'})
+          if(values.givenchy == true){
+            body.push({'name': 'givenchy'})
           }
           if(values.dior == true){
             body.push({'name': 'dior'})

@@ -92,7 +92,7 @@ const FollowedArtist: NextPage = () => {
                             Collección {item.name}
                           </Card.Title>
                           <Card.Text className="d-flex justify-content-center">
-                            <Link href={`artist_closet/${item.fname}`}>
+                            <Link href={`artist_closet/${item.fname}/${item.id}`}>
                               ver mas...
                             </Link>
                           </Card.Text>
