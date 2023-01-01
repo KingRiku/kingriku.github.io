@@ -19,9 +19,11 @@ const
 
   return (
     <Fragment>
-        <Row style={{ borderLeft:'1px', color:'#RG3477', borderBottom: '2px solid #000000' }}>
+        <Row 
+        // style={{ borderLeft:'1px', color:'#RG3477', borderBottom: '2px solid #000000' }}
+        >
           <Col xs='4' className='d-flex align-items-center'>
-            <h6>Favoritos</h6>
+            <h6>Marcas Favoritas</h6>
           </Col>
           <Col xs='8'>
             <Row>

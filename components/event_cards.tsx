@@ -82,17 +82,6 @@ const EventCards: FC<genresProps> = ({ genres }) => {
                     {liked.filter( (q: MarkTypes) => (q.id === genres.id) ).length < 1 ? <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faHeart} />: <FontAwesomeIcon style={{ color: '#EE5EC7' }} size='lg' icon={faHeart} />}
                     {/* <Icon name={`${clicked ? "heart-fill" : "heart"}`}></Icon> */}
                   </Button>
-                  {/* <HearthCheckbox genres={item.name}/> */}
-                  {/* <Link href='/collections_lists'>
-                      <FontAwesomeIcon style={{ color: '#EE5EC7' }} icon={faHeart} />
-                  </Link> */}
-                  </Col>
-                  <Col xs='2'>
-                  <Button
-                    style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}
-                    onClick={() => onHeartClick(genres)}>
-                      <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faCartShopping} />
-                    </Button>
                   </Col>
                 </Row>
                 <Card.Text>

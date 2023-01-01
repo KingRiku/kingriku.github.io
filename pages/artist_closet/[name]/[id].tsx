@@ -82,7 +82,7 @@ const ClosetNumber = () => {
   return (
     <Layout>
       {/* <Header/> */}
-      <Row className='mt-2 mb-2'>
+      <Row className='mt-3 mb-2'>
         <Col xs='12' lg='12' className='d-flex justify-content-center'>
           <p><strong> {name}</strong><br/>
            Colección: {id}</p>

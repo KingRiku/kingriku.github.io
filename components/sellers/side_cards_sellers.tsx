@@ -1,14 +1,14 @@
 import React, { FC, Fragment } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { MarkTypes } from '../event_cards'
-import ImagesCustomsSellers from './image_customs_artist'
+import ImagesCustomsSellers from './image_customs_sellers'
 
 type FavProps ={
   images: MarkTypes[]
 }
 
 const 
- SideCardsArtists: FC<FavProps> = ({images}) => {
+ SideCardsSellers: FC<FavProps> = ({images}) => {
 
   const tamaño: any = [
     '12',
@@ -18,9 +18,11 @@ const
 
   return (
     <Fragment>
-        <Row style={{ borderLeft:'1px', color:'#RG3477', borderBottom: '2px solid #000000' }}>
+        <Row 
+        // style={{ borderLeft:'1px', color:'#RG3477', borderBottom: '2px solid #000000' }}
+        >
           <Col xs='4' className='d-flex align-items-center'>
-            <h6>Artistas Favoritos</h6>
+            <h6>Intercambios Favoritos</h6>
           </Col>
           <Col xs='8'>
             <Row>
@@ -38,4 +40,4 @@ const
   )
 }
 
-export default SideCardsArtists
+export default SideCardsSellers

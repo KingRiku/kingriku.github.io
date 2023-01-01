@@ -39,14 +39,14 @@ export const genres = [
     image: 'https://st1.uvnimg.com/ab/4e/83ff42ad4b1c9350a7b2fe0a71e7/gettyimages-crop-628074106.jpg',
     desc: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,'
   },
-  {
-    id: 6,
-    name: 'Puma',
-    fname: 'puma',
-    fav: false,
-    image: 'https://footwearnews.com/wp-content/uploads/2017/08/weeknd-puma-04-landscape.jpg?w=1024',
-    desc: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,'
-  },
+  // {
+  //   id: 6,
+  //   name: 'Puma',
+  //   fname: 'puma',
+  //   fav: false,
+  //   image: 'https://footwearnews.com/wp-content/uploads/2017/08/weeknd-puma-04-landscape.jpg?w=1024',
+  //   desc: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,'
+  // },
   {
     id: 7,
     name: 'Givenchy',

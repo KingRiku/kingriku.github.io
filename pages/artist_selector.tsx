@@ -55,9 +55,7 @@ const ArtistSelector: NextPage = () => {
       for(let grp of groups) {
         for(let art of artist) {
           for(let fart of art.fmarcas){
-            console.log(fart)
             if(art.style == grp.name && cos.name == fart) {
-              console.log(art)
               body.push(art)  
             }
           }
@@ -68,7 +66,7 @@ const ArtistSelector: NextPage = () => {
     let unique = body.filter((v, i, a) => a.indexOf(v) === i)
     setArtistas(unique)
   }, [marks])
-  console.log(artistas)
+
   return (
     <Fragment>
     {
@@ -117,21 +115,25 @@ const ArtistSelector: NextPage = () => {
         <Form>
           <Container>
             <Row>
-              <Col xs='12'>
+              <Col xs='12' className='mt-2'>
                 <h4 style={{ textAlign: 'justify' }}><strong>Hemos encontrado estos artistas que pueden ser de tu interés:</strong></h4>
               </Col>
             </Row>
             <Row>
-            {
-              artistas.map((item, index) => (
-                <Col className='mb-3' key={index}>
-                  <SideCard selections={item} />
-                </Col>
-              ))
-            }
-          </Row>
+              {
+                artistas.map((item, index) => (
+                  <Col className='mb-3 mt-2' key={index}>
+                    <SideCard selections={item} />
+                  </Col>
+                ))
+              }
+            </Row>
+            <Row>
+              <Col xs='12' lang='12' className='d-flex justify-content-end mb-3'>
+                <Button variant='dark' type='submit'>Siguiente</Button>
+              </Col>
+            </Row>
           </Container>
-          <Button variant='dark' type='submit'>Siguiente</Button>
         </Form>
       )}
       </Formik>

@@ -1,6 +1,7 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Col, Container, Row, Image, Button } from 'react-bootstrap'
 import ProfileImage from '../assets/profile.png'
+import SideCardsSellers from '../components/sellers/side_cards_sellers'
 import SideCards from '../components/side_cards'
 import SideCardsArtists from '../components/side_cards_artist'
 import Layout from '../components/utils/layout'
@@ -24,11 +25,11 @@ const Profile = () => {
       setLikedArtist([])
     } else {
       const gatito = JSON.parse(storageArtist ?? '')
-      setLikedSellers(gatito)
+      setLikedArtist(gatito)
     }
 
     const storageSellers = sessionStorage.getItem("Seller_list");
-    if(storageArtist ==  null) {
+    if(storageSellers ==  null) {
       setLikedSellers([])
     } else {
       const gatito = JSON.parse(storageSellers ?? '')
@@ -65,7 +66,7 @@ const Profile = () => {
           <SideCardsArtists images={likedArtist}></SideCardsArtists>
         </Row>
         <Row className='mb-3'>
-          <SideCardsArtists images={likedArtist}></SideCardsArtists>
+          <SideCardsSellers images={likedSellers}></SideCardsSellers>
         </Row>
         <Row className='mb-3'>
           <Col lg='12' className='d-flex justify-content-center'>

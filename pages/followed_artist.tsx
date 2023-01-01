@@ -64,7 +64,7 @@ const FollowedArtist: NextPage = () => {
     <Layout>
       <Container>
         <Row>
-          <Col xs='12' className="d-flex justify-content-center mb-2 mt-2">
+          <Col xs='12' className="d-flex justify-content-center mb-2 mt-3">
             <h6><strong>Artists</strong></h6>
           </Col>
           <Col xs='12' className="mb-3">

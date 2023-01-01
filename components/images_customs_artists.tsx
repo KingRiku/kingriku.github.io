@@ -30,25 +30,14 @@ const ImagesCustomsArtist: FC<imageProp> = ({imger, name}) => {
   const [first, setfirst] = useState<any>()
 
   useLayoutEffect(() => {
-    // for(let c of cosito) {
-    //   if(cosito.filter(e => e.id === imger)){
-    //     console.log(c)
-    //   }
-    // }
-    console.log(cosito)
     for (const cos of cosito) {
       for (const im of cos.images){
-        console.log(im.fname)
-        console.log(im.id)
         if(im.id == imger) {
           if(im.fname === name ) {
-            console.log('holi', im.img)
             setfirst(im.img)
           } else {
-            console.log('pene 2')
           }
         } else {
-          console.log('pene')
         }
       }
     }
@@ -60,6 +49,7 @@ const ImagesCustomsArtist: FC<imageProp> = ({imger, name}) => {
           width={'100%'}
           height={'100%'}
           alt='171x180'
+          style={{maxHeight: '8rem'}}
           src={first}
         />
       </Figure>

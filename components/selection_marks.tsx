@@ -74,6 +74,11 @@ function SelectionMarks() {
       <Form>
         <Container>
           <Row>
+            <Col className='mb-3 mt-3'>
+              <h4><strong>Marcas favoritas:</strong></h4>
+            </Col>     
+          </Row>
+          <Row>
             {
                Marcas.map((item, index) => (
                 <Col xs='6' lg='3' key={index}>

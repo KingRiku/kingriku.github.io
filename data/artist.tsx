@@ -109,9 +109,9 @@ export const artist = [
   },
   {
     name: 'Maneskin',
-    genre: 'Pop',
+    genre: 'Pop-Rock',
     fname: 'maneskin',
-    style: 'pop',
+    style: 'poprock',
     image: [
       {
         id: "1",
