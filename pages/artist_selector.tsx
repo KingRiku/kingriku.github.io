@@ -6,6 +6,7 @@ import React, { Fragment, useEffect, useLayoutEffect, useState } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import SideCard from '../components/side_card'
 import { artist } from '../data/artist'
+import { Marcas } from '../data/marcas'
 
 type SelectionsGroup = {
   bts: boolean
@@ -37,26 +38,31 @@ const ArtistSelector: NextPage = () => {
     setGroups(grupos)
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     script()
   }, [])
 
   useEffect(() => {
     let body = []
+    // for(let cos of marks) {
+    //   for(let art of artist){
+    //     if(art.fmarcas == cos.name) {
+    //       body.push(art)
+    //     }
+    //   }
+    // }
     for(let cos of marks) {
-      for(let art of artist){
-        if(art.fmarcas == cos.name) {
-          body.push(art)
+      for(let grp of groups) {
+        for(let art of artist) {
+          for(let fart of art.fmarcas){
+            if(art.style == grp.name && cos.name == fart) {
+              body.push(art)  
+            }
+          }
         }
       }
     }
-    for(let grp of groups) {
-      for(let art of artist){
-        if(art.style == grp.name) {
-          body.push(art)
-        }
-      }
-    }
+
     let unique = body.filter((v, i, a) => a.indexOf(v) === i)
     setArtistas(unique)
   }, [marks])
@@ -109,21 +115,25 @@ const ArtistSelector: NextPage = () => {
         <Form>
           <Container>
             <Row>
-              <Col xs='12'>
+              <Col xs='12' className='mt-2'>
                 <h4 style={{ textAlign: 'justify' }}><strong>Hemos encontrado estos artistas que pueden ser de tu interés:</strong></h4>
               </Col>
             </Row>
             <Row>
-            {
-              artistas.map((item, index) => (
-                <Col className='mb-3' key={index}>
-                  <SideCard selections={item} />
-                </Col>
-              ))
-            }
-          </Row>
+              {
+                artistas.map((item, index) => (
+                  <Col className='mb-3 mt-2' key={index}>
+                    <SideCard selections={item} />
+                  </Col>
+                ))
+              }
+            </Row>
+            <Row>
+              <Col xs='12' lang='12' className='d-flex justify-content-end mb-3'>
+                <Button variant='dark' type='submit'>Siguiente</Button>
+              </Col>
+            </Row>
           </Container>
-          <Button variant='dark' type='submit'>Siguiente</Button>
         </Form>
       )}
       </Formik>

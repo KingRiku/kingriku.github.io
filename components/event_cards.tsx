@@ -3,6 +3,7 @@ import React, { ChangeEvent, FC, FormEvent, Fragment, useEffect, useLayoutEffect
 import { Card, Col, Row, Form, Button } from 'react-bootstrap'
 import { genres } from '../data/genres'
 import { faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 // import { genres } from '../data/genres.json'
 
 export type MarkTypes = {
@@ -35,7 +36,6 @@ const EventCards: FC<genresProps> = ({ genres }) => {
       desc: item.desc,
       fav: true
     }
-    console.log(body)
     const storage = sessionStorage.getItem("Artist_list");
     if(storage == null){
       prebody.push(body)
@@ -47,12 +47,11 @@ const EventCards: FC<genresProps> = ({ genres }) => {
         queso.push(body)
         sessionStorage.setItem("Artist_list", JSON.stringify(queso));
       } else {
-        console.log('repetido gg eazuy')
       }
 
     }
   };
-  useLayoutEffect(() => {
+  useEffect(() => {
     const storage = sessionStorage.getItem("Artist_list");
     if(storage ==  null) {
       setLiked([])
@@ -62,14 +61,15 @@ const EventCards: FC<genresProps> = ({ genres }) => {
     }
   }, [])
   
-  console.log(liked)
   return (
     <Fragment>
       <Form>
         <Row>
           <Col xs='12' className='d-flex justify-content-center'>
             <Card style={{ width: '30rem' }} className='mb-2 shadow'>
-              <Card.Header style={{ backgroundColor: '#ffff', fontFamily: 'Garamond',fontWeight: 'bold' }}>{genres.name}</Card.Header>
+              <Link href={`/marks/${genres.name}`}>
+                <Card.Header style={{ backgroundColor: '#ffff', fontFamily: 'Garamond',fontWeight: 'bold', color: '#000000' }}>{genres.name}</Card.Header>
+              </Link>
               <Card.Img variant="top" src={genres.image} style={{ minHeight: '15rem' }} />
               <Card.Body>
                 <Row className='d-flex justify-content-end'>
@@ -82,17 +82,6 @@ const EventCards: FC<genresProps> = ({ genres }) => {
                     {liked.filter( (q: MarkTypes) => (q.id === genres.id) ).length < 1 ? <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faHeart} />: <FontAwesomeIcon style={{ color: '#EE5EC7' }} size='lg' icon={faHeart} />}
                     {/* <Icon name={`${clicked ? "heart-fill" : "heart"}`}></Icon> */}
                   </Button>
-                  {/* <HearthCheckbox genres={item.name}/> */}
-                  {/* <Link href='/collections_lists'>
-                      <FontAwesomeIcon style={{ color: '#EE5EC7' }} icon={faHeart} />
-                  </Link> */}
-                  </Col>
-                  <Col xs='2'>
-                  <Button
-                    style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}
-                    onClick={() => onHeartClick(genres)}>
-                      <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faCartShopping} />
-                    </Button>
                   </Col>
                 </Row>
                 <Card.Text>

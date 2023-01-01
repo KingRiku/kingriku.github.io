@@ -21,7 +21,7 @@ const SideCard: FC<FavouriteArtistProps> = ({ selections }) => {
     <Fragment>
       <Container fluid>
         <Row>
-          <div className="card flex-row mb-3 shadow pt-2 pb-2">
+          <div className="card flex-row mb-22 shadow pt-2 pb-2">
             <img className="card-img-left example-card-img-responsive" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" style={{width: '10rem'}}/>
             <div className="card-body">
               <h4 className="card-title h5 h4-sm">{selections.name}</h4>

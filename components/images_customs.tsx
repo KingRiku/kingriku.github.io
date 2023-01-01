@@ -1,20 +1,40 @@
-import React, { FC, Fragment } from 'react'
-import { Col, Container, Image, Row } from 'react-bootstrap'
+import React, { FC, Fragment, useLayoutEffect, useState } from 'react'
+import { Col, Container, Figure, Image, Row } from 'react-bootstrap'
+import { genres } from '../data/genres'
+import { genresData, MarkTypes } from './event_cards'
 
 type imageProp = {
-  img: string
+  img: number
 }
 
 const ImagesCustoms: FC<imageProp> = ({img}) => {
+  let cosito: genresData[]  = genres
+  const [first, setfirst] = useState<any>()
+
+  useLayoutEffect(() => {
+    // for(let c of cosito) {
+    //   if(cosito.filter(e => e.id === img)){
+    //     console.log(c)
+    //   }
+    // }
+    let cosi = cosito.filter(e => e.id === img)
+    setfirst(cosi);
+    // if(cosito.filter(e => e.id === img)) {
+    //   console.log(cosito);
+    // }
+    
+  }, [])
+
   return (
     <Fragment>
-      <Container fluid>
-        <Row className='d-flex justify-content-center'>
-          <Col className='d-flex justify-content-center'>
-            <Image src={img} alt='' className="img-fluid"  />
-          </Col>
-        </Row>
-      </Container>
+      <Figure>
+        <Figure.Image 
+          width={'100%'}
+          height={'100%'}
+          alt='171x180'
+          src={first?.[0].image}
+        />
+      </Figure>
     </Fragment>
   )
 }

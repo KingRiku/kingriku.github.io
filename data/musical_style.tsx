@@ -12,12 +12,12 @@ export const MusicaStiles = [
     text: 'KPOP',
     fname: 'kpop'
   },
-  {
-    id: '3',
-    value:'3',
-    text: 'R&B',
-    fname: 'ryb'
-  },
+  // {
+  //   id: '3',
+  //   value:'3',
+  //   text: 'R&B',
+  //   fname: 'ryb'
+  // },
   {
     id: '4',
     value:'4',
@@ -42,10 +42,10 @@ export const MusicaStiles = [
     text: 'Rap',
     fname: 'rap'
   },
-  {
-    id: '8',
-    value:'8',
-    text: 'Urbana',
-    fname: 'urbana'
-  },
+  // {
+  //   id: '8',
+  //   value:'8',
+  //   text: 'Urbana',
+  //   fname: 'urbana'
+  // },
 ]

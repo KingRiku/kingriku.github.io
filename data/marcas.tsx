@@ -18,17 +18,17 @@ export const Marcas = [
     text: 'Luis Vutton',
     fname: 'luisvutton'
   },
-  {
-    id: '4',
-    value:'4',
-    text: 'Puma',
-    fname: 'puma'
-  },
+  // {
+  //   id: '4',
+  //   value:'4',
+  //   text: 'Puma',
+  //   fname: 'puma'
+  // },
   {
     id: '5',
     value:'5',
-    text: 'Converse',
-    fname: 'converse'
+    text: 'Givenchy',
+    fname: 'givenchy'
   },
   {
     id: '6',

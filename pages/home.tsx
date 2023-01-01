@@ -9,10 +9,14 @@ import { genres } from '../data/genres'
 const Home = () => {
   const [artist, setArtist] = useState<any[]>([])
   const [artistas, setArtistas] = useState<any[]>([])
+  const [marcas, setMarcas] = useState<any[]>([])
+  const [marks, setMarks] = useState<any[]>([])
 
   const script = async () => {
     const artist = await (JSON.parse(localStorage.getItem('artist') as string) ?? '')
+    const marks = await (JSON.parse(localStorage.getItem('marks') as string) ?? '')
     setArtist(artist)
+    setMarks(marks)
   }
 
   useEffect(() => {
@@ -28,16 +32,24 @@ const Home = () => {
         }
       }
     }
-   
+    let bedy = []
+    for(let mar of marks) {
+      for(let gen of genres){
+        if(gen.fname == mar.name) {
+          bedy.push(gen)
+        }
+      }
+    }
+    setMarcas(bedy)
     let unique = body.filter((v, i, a) => a.indexOf(v) === i)
     setArtistas(unique)
   }, [artist])
-  
+
   return (
     <Layout>
         <Container>
           <Row>
-            <Col xs='12' sm='12' md='12' lg='12' className='d-flex justify-content-center mb-1'>
+            <Col xs='12' sm='12' md='12' lg='12' className='d-flex justify-content-center mb-1 mt-3'>
               <h5 style={{ fontWeight: 'bold'}}>Artistas en tendencia</h5>
             </Col>
             <Col xs='12' sm='12' md='12' lg='12'>
@@ -51,7 +63,7 @@ const Home = () => {
           </Row>
           <Row>
             {
-              genres.map((item, index) => (
+              marcas.map((item, index) => (
                 <Col xs='12' lg='12' key={index}>
                   <EventCards genres={item} />
                 </Col>

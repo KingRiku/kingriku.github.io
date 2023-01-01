@@ -11,7 +11,7 @@ export type LayoutProps = {
 
 const Layout: FC<PropsWithChildren<LayoutProps>> = ({children}) => {
   return (
-    <div className={classNames(LayoutStyles.pageContainer)}>
+    <div className={classNames(LayoutStyles.pageContainer)} style={{ backgroundColor: '#F2F2F2' }}>
       <Head>
         <title>Tesis-App</title>
         <meta name="description" content='cosito' />

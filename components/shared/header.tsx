@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { Button, Container, Nav, Navbar } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faBars, faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Link from 'next/link';
 
@@ -13,12 +13,14 @@ const Header = () => {
 
   return (
     <Fragment>
-      <Navbar expand="lg" variant="light" bg="light">
+      <Navbar expand="lg" style={{ backgroundColor: '#84C5EE' }}>
         <Container>
         <Button variant='light' onClick={handleShow}><FontAwesomeIcon style={{ color: 'black' }} icon={faBars} /></Button>
-        <Navbar.Brand href="#">Aplicacion Tesis v2</Navbar.Brand>
+        <Link href='/home'>
+          <Navbar.Brand>Aplicacion Tesis v2</Navbar.Brand>
+        </Link>
         <Link href={'/profile'}>
-          <Navbar.Brand ><FontAwesomeIcon style={{ color: 'black' }} icon={faUser} /></Navbar.Brand>
+          <Navbar.Brand><FontAwesomeIcon style={{ color: 'black' }} icon={faUser} /></Navbar.Brand>
         </Link>
         </Container>
       </Navbar>
@@ -38,10 +40,15 @@ const Header = () => {
               <h6 style={{ padding: '1rem' }} className='d-flex justify-content-center'>Artistas</h6>
             </Link>
             <hr style={{ color: '#D555A6', fontWeight: 'bold' }}></hr>
-            <Link href={'/collections_lists'}>
-              <h6 style={{ padding: '1rem' }} className='d-flex justify-content-center'>Colecciones</h6>
+            <Link href={'/re_sellers'}>
+              <h6 style={{ padding: '1rem' }} className='d-flex justify-content-center'>Intercambio</h6>
             </Link>
             <hr style={{ color: '#D555A6', fontWeight: 'bold' }}></hr>
+            <Link href={'/shopping_bar'}>
+              <h6 style={{ padding: '1rem' }} className='d-flex justify-content-center'><FontAwesomeIcon style={{ color: 'blue' }} icon={faShoppingBasket} /></h6>
+            </Link>
+            <hr style={{ color: '#D555A6', fontWeight: 'bold' }}></hr>
+
           </Nav>
           </Offcanvas.Body>
         </Container>

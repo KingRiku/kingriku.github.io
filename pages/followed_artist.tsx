@@ -4,6 +4,8 @@ import { Card, Col, Container, Image, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import { artist_collections } from "../data/followed_artist";
 import Layout from '../components/utils/layout';
+import { artist } from "../data/artist";
+import Link from "next/link";
 
 const FollowedArtist: NextPage = () => {
   const [onSearchText, setSearchText] = useState('');
@@ -61,12 +63,9 @@ const FollowedArtist: NextPage = () => {
   return (
     <Layout>
       <Container>
-        {/* <Row>
-          <Header />
-        </Row> */}
         <Row>
-          <Col xs='12'>
-            <h6>Marca</h6>
+          <Col xs='12' className="d-flex justify-content-center mb-2 mt-3">
+            <h6><strong>Artists</strong></h6>
           </Col>
           <Col xs='12' className="mb-3">
             <input
@@ -80,24 +79,30 @@ const FollowedArtist: NextPage = () => {
         </Row>
         <Row>
           <Col xs='12'>
-            <Slider {...settings}>
-              {
-                artist_collections.map((item, index) =>(
-                  <Card key={index}>
-                    <Card.Img src={item.image} style={{ minHeight: '35rem' }}>
-                    </Card.Img>
-                    <Card.Body>
-                      <Card.Title className="d-flex justify-content-center">
-                        Collección {item.name}
-                      </Card.Title>
-                      <Card.Text className="d-flex justify-content-center">
-                        <a href="">ver mas...</a>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                ))
-              }
-            </Slider>
+            {
+              artist_collections.map((item, index) => (
+                <Slider {...settings} key={index} className='mb-5'>
+                  {
+                    item.images.map((item, index) =>(
+                      <Card key={index}>
+                        <Card.Img src={item.img} style={{ maxHeight: '20rem' }} className='img-fluid'>
+                        </Card.Img>
+                        <Card.Body>
+                          <Card.Title className="d-flex justify-content-center">
+                            Collección {item.name}
+                          </Card.Title>
+                          <Card.Text className="d-flex justify-content-center">
+                            <Link href={`artist_closet/${item.fname}/${item.id}`}>
+                              ver mas...
+                            </Link>
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    ))
+                  }
+                </Slider>                
+              ))
+            }
           </Col>
         </Row>
       </Container>
