@@ -1,8 +1,9 @@
 import { useRouter } from "next/router";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Card, Col, Container, Image, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import Layout from "../../../components/utils/layout";
+import { clothes } from "../../../data/artist_clothes";
 import { collections } from "../../../data/collections";
 // import Layout from "../components/utils/layout";
 // import { collections } from '../data/collections'
@@ -11,6 +12,7 @@ const MarksList = () => {
   const router = useRouter()
   const name = router.query.name as string
   const [onSearchText, setSearchText] = useState('');
+  const [collect , setCollect] = useState<any[]>([])
 
   // useEffect(() => {
   //   if (onSearchText !== '') {
@@ -30,7 +32,7 @@ const MarksList = () => {
     centerMode: true,
     autoplay: true,
     speed: 300,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     cssEase: "linear",
     responsive: [
       {
@@ -62,14 +64,25 @@ const MarksList = () => {
   const onFilterChange = (e: any) => {
     setSearchText(e.target.value);
   };
+
+  useEffect(() => {
+    let body = []
+    for (const col of collections){
+      if(col.name === name){
+        body.push(col)
+      }
+    }
+    setCollect(body)
+  }, [name])
+  
   return (
     <Layout>
       <Container>
         <Row>
-          <Col xs='12' className="d-flex justify-content-center mt-2 mb-2">
+          <Col xs='12' className="d-flex justify-content-center mt-3 mb-2">
             <h6><strong>{name}</strong></h6>
           </Col>
-          <Col xs='12' className="mb-3">
+          {/* <Col xs='12' className="mb-3">
             <input
               type="text"
               className="form-control"
@@ -77,28 +90,28 @@ const MarksList = () => {
               onChange={onFilterChange}
               placeholder="Quick search by name"
             />
-          </Col>
+          </Col> */}
         </Row>
         <Row>
           <Col xs='12'>
               {
-                collections.map((item, index) =>(
+                collect.map((item, index) =>(
                   <Slider {...settings} key={index} className='mb-5'>
                     {
-                      item.image.map(( item, index ) => (
+                      item.image.map(( item: any, index: number ) => (
                         <Card key={index}>
                           <Card.Img src={item.image}>
                           </Card.Img>
                           <Card.Body>
                             <Card.Title className="d-flex justify-content-center">
-                              Collección {item.name}
+                              {item.desc}
                             </Card.Title>
                             <Card.Title className="d-flex justify-content-center">
                               {item.year}
                             </Card.Title>
-                            <Card.Text className="d-flex justify-content-center">
+                            {/* <Card.Text className="d-flex justify-content-center">
                               <a href="">ver mas...</a>
-                            </Card.Text>
+                            </Card.Text> */}
                           </Card.Body>
                         </Card>
                       ))

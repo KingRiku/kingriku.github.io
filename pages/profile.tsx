@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Col, Container, Row, Image, Button } from 'react-bootstrap'
 import ProfileImage from '../assets/profile.png'
@@ -53,10 +54,14 @@ const Profile = () => {
         </Row>
         <Row className='mb-3'>
           <Col xs='6' sm='6' md='6' lg='6' className='d-flex justify-content-center'>
-            <h6>Seguidores</h6>
+            <Link href={'follows'} style={{ color: '$000000'}}>
+              <h6>Seguidores</h6>
+            </Link>
           </Col>
           <Col xs='6' sm='6' md='6' lg='6' className='d-flex justify-content-center'>
-            <h6>Seguidos</h6>
+            <Link href={'followed'} style={{ color: '$000000'}}>
+              <h6>Seguidos</h6>
+            </Link>
           </Col>
         </Row>
         <Row className='mb-3'>

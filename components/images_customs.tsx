@@ -12,23 +12,15 @@ const ImagesCustoms: FC<imageProp> = ({img}) => {
   const [first, setfirst] = useState<any>()
 
   useLayoutEffect(() => {
-    // for(let c of cosito) {
-    //   if(cosito.filter(e => e.id === img)){
-    //     console.log(c)
-    //   }
-    // }
     let cosi = cosito.filter(e => e.id === img)
     setfirst(cosi);
-    // if(cosito.filter(e => e.id === img)) {
-    //   console.log(cosito);
-    // }
-    
   }, [])
 
   return (
     <Fragment>
-      <Figure>
-        <Figure.Image 
+      <Figure >
+        <Figure.Image
+          className='shadow' 
           width={'100%'}
           height={'100%'}
           alt='171x180'

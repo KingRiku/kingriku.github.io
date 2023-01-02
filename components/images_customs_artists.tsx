@@ -1,39 +1,21 @@
 import React, { FC, Fragment, useLayoutEffect, useState } from 'react'
-import { Col, Container, Figure, Image, Row } from 'react-bootstrap'
-import { artist_collections } from '../data/followed_artist'
-
-import { genresData, MarkTypes } from './event_cards'
+import { Figure } from 'react-bootstrap'
+import { clothes } from '../data/artist_clothes'
 
 type imageProp = {
   imger: number
   name: string
 }
 
-type ArtistCollection = {
-  images: [{
-    id: number;
-    imger: string;
-    name: string;
-    fname: string;
-  }][];
-}[]
-
-type ArtistCollectionDos = {
-  id: number;
-  imger: string;
-  name: string;
-  fname: string;
-}
-
 const ImagesCustomsArtist: FC<imageProp> = ({imger, name}) => {
-  let cosito = artist_collections
+  let cosito = clothes
   const [first, setfirst] = useState<any>()
 
   useLayoutEffect(() => {
-    for (const cos of cosito) {
-      for (const im of cos.images){
+    for (const cos of clothes) {
+      for (const im of cos.arrayImages){
         if(im.id == imger) {
-          if(im.fname === name ) {
+          if(im.name === name ) {
             setfirst(im.img)
           } else {
           }
@@ -45,11 +27,11 @@ const ImagesCustomsArtist: FC<imageProp> = ({imger, name}) => {
   return (
     <Fragment>
       <Figure>
-        <Figure.Image 
+        <Figure.Image
+          className='shadow'
           width={'100%'}
           height={'100%'}
           alt='171x180'
-          style={{maxHeight: '8rem'}}
           src={first}
         />
       </Figure>

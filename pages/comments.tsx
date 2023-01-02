@@ -77,7 +77,6 @@ const Comments = () => {
       connection: 'now',
       comment: value,
     }
-    console.log(body)
     setComments(comments => [...comments, body])
   }
   return (

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { genres } from '../data/genres'
 import ItemCard from '../components/item_card'
 import { genresData } from '../components/event_cards'
+import { arrayCollection } from './artist_closet/[name]/[id]'
 
 const ShopingBar = () => {
 
@@ -15,7 +16,7 @@ const ShopingBar = () => {
   // const RestCont =  () => {
   //   setContador(contador - 1)
   // }
-  const [iktemsAdded, setItemsAdded] = useState<genresData[]>([])
+  const [iktemsAdded, setItemsAdded] = useState<arrayCollection[]>([])
   useEffect(() => {
     const storage = sessionStorage.getItem("cart_list");
     if(storage !==  null) {
@@ -23,7 +24,6 @@ const ShopingBar = () => {
       setItemsAdded(collection)
     }
   }, [])
-  console.log('liked',iktemsAdded)
 
   return (
     <Layout>
@@ -35,7 +35,7 @@ const ShopingBar = () => {
         </Row>
         <Row className='mb-3'>
           {
-            iktemsAdded.map((item: genresData, index: number) => (
+            iktemsAdded.map((item: arrayCollection, index: number) => (
               <Col xs='6' key={index}>
                 <ItemCard items={item} />
               </Col>

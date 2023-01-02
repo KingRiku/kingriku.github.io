@@ -4,6 +4,7 @@ import { Card, Col, Row, Form, Button } from 'react-bootstrap'
 import { genres } from '../data/genres'
 import { faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
+import { collectionLiked } from '../pages/artist_closet/[name]/[id]'
 // import { genres } from '../data/genres.json'
 
 export type MarkTypes = {
@@ -24,11 +25,10 @@ type genresProps = {
 } 
 
 const EventCards: FC<genresProps> = ({ genres }) => {
-  const [liked, setLiked] = useState([]);
-  const [clicked, setClicked] = useState();
-  // const [text, setText] = useState(JSON.stringify(ModifierJson, null, 2));
+  const [clicked, setClicked] = useState<boolean>();
 
   const onHeartClick = async (item: MarkTypes) => {
+    setClicked(true)
     const prebody = []
     const body: MarkTypes =  {
       id: item.id,
@@ -53,11 +53,13 @@ const EventCards: FC<genresProps> = ({ genres }) => {
   };
   useEffect(() => {
     const storage = sessionStorage.getItem("Artist_list");
-    if(storage ==  null) {
-      setLiked([])
+    if(storage == null){
     } else {
-      const gatito = JSON.parse(storage ?? '')
-      setLiked(gatito)
+      const collection = JSON.parse(storage)
+      const items = collection.filter( (q: any) => (q.id === genres.id) )
+      for(const i of items){
+        setClicked(true)
+      }
     }
   }, [])
   
@@ -79,7 +81,7 @@ const EventCards: FC<genresProps> = ({ genres }) => {
                     type='button'
                     style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}
                     onClick={() => onHeartClick(genres)}>
-                    {liked.filter( (q: MarkTypes) => (q.id === genres.id) ).length < 1 ? <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faHeart} />: <FontAwesomeIcon style={{ color: '#EE5EC7' }} size='lg' icon={faHeart} />}
+                    {clicked ? <FontAwesomeIcon style={{ color: '#EE5EC7' }} size='lg' icon={faHeart} />: <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faHeart} />}
                     {/* <Icon name={`${clicked ? "heart-fill" : "heart"}`}></Icon> */}
                   </Button>
                   </Col>

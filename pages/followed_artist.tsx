@@ -1,25 +1,43 @@
 import { NextPage } from "next";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Image, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import { artist_collections } from "../data/followed_artist";
 import Layout from '../components/utils/layout';
 import { artist } from "../data/artist";
 import Link from "next/link";
+import { clothes } from "../data/artist_clothes";
+import { arrayCollection } from "./artist_closet/[name]/[id]";
+
 
 const FollowedArtist: NextPage = () => {
   const [onSearchText, setSearchText] = useState('');
 
-  // useEffect(() => {
-  //   if (onSearchText !== '') {
-  //     const filteredObject = collections.filter((item) => {
-  //       return item.name.toLowerCase().includes(onSearchText.toLowerCase());
-  //     });
-  //     setData([...filteredObject]);
-  //   } else {
-  //     setData([...entities]);
-  //   }
-  // }, [onSearchText]);
+  const [artist, setArtist] = useState<any[]>([])
+  const [artistas, setArtistas] = useState<any[]>([])
+
+  const script = async () => {
+    const artist = await (JSON.parse(localStorage.getItem('artist') as string) ?? '')
+    setArtist(artist)
+  }
+
+  useEffect(() => {
+    script()
+  }, [])
+
+  useEffect(() => {
+    let body = []
+    for(let cos of artist) {
+      for(let art of clothes){
+        if(art.name == cos.name) {
+          body.push(art)
+        }
+      }
+    }
+    let unique = body.filter((v, i, a) => a.indexOf(v) === i)
+    setArtistas(unique)
+  }, [artist])
+
   const settings = {
     dots: true,
     infinite: true,
@@ -28,7 +46,7 @@ const FollowedArtist: NextPage = () => {
     centerMode: true,
     autoplay: true,
     speed: 300,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     responsive: [
       {
@@ -60,6 +78,7 @@ const FollowedArtist: NextPage = () => {
   const onFilterChange = (e: any) => {
     setSearchText(e.target.value);
   };
+
   return (
     <Layout>
       <Container>
@@ -80,19 +99,22 @@ const FollowedArtist: NextPage = () => {
         <Row>
           <Col xs='12'>
             {
-              artist_collections.map((item, index) => (
+              artistas.map((item, index) => (
                 <Slider {...settings} key={index} className='mb-5'>
                   {
-                    item.images.map((item, index) =>(
+                    item?.arrayCollection?.map((item: arrayCollection, index: number) => (
                       <Card key={index}>
-                        <Card.Img src={item.img} style={{ maxHeight: '20rem' }} className='img-fluid'>
+                        <Card.Img src={item.img} style={{ minHeight: '20rem', maxHeight: '20rem' }} className='img-fluid' >
                         </Card.Img>
                         <Card.Body>
                           <Card.Title className="d-flex justify-content-center">
-                            Collección {item.name}
+                            <p>
+                              Marca: {item.marca} <br/>
+                              Modelo: {item.model}
+                            </p>
                           </Card.Title>
                           <Card.Text className="d-flex justify-content-center">
-                            <Link href={`artist_closet/${item.fname}/${item.id}`}>
+                            <Link href={`artist_closet/${item.name}/${item.id}`}>
                               ver mas...
                             </Link>
                           </Card.Text>
@@ -100,7 +122,7 @@ const FollowedArtist: NextPage = () => {
                       </Card>
                     ))
                   }
-                </Slider>                
+                </Slider>
               ))
             }
           </Col>

@@ -4,6 +4,7 @@ import { Card, Col, Row, Form, Button } from 'react-bootstrap'
 import { genres } from '../data/genres'
 import { faHeart, faCartShopping, faComment } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
+import { arrayCollection } from '../pages/artist_closet/[name]/[id]'
 // import { genres } from '../data/genres.json'
 
 export type MarkTypes = {
@@ -11,6 +12,7 @@ export type MarkTypes = {
   name: string;
   desc: string;
   fav: boolean
+  img?: string
 }
 export type genresData ={
   id: number,
@@ -20,7 +22,7 @@ export type genresData ={
   desc: string,
 }
 export type genresProps = {
-  genres: genresData
+  genres: arrayCollection
 } 
 
 const EventCardsSellers: FC<genresProps> = ({ genres }) => {
@@ -28,14 +30,15 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
   const [clicked, setCartClicked] = useState<boolean>();
   // const [text, setText] = useState(JSON.stringify(ModifierJson, null, 2));
 
-  const onHeartClick = async (item: MarkTypes) => {
+  const onHeartClick = async (item: arrayCollection) => {
     setHeartClicked(!clickedHeart)
     const prebody = []
-    const body: MarkTypes =  {
+    const body: arrayCollection =  {
       id: item.id,
+      img: item.img,
       name: item.name,
-      desc: item.desc,
-      fav: true
+      marca: item.marca,
+      model: item.model,
     }
     const storage = sessionStorage.getItem("Seller_list");
     if(storage == null){
@@ -63,14 +66,15 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
     }
   }, [])
   
-  const onShoppingClick = async (item: MarkTypes) => {
+  const onShoppingClick = async (item: arrayCollection) => {
     setCartClicked(!clicked)
     const prebody = []
-    const body: MarkTypes =  {
+    const body: arrayCollection =  {
       id: item.id,
+      img: item.img,
       name: item.name,
-      desc: item.desc,
-      fav: true
+      marca: item.marca,
+      model: item.model,
     }
     const storage = sessionStorage.getItem("cart_list");
     if(storage == null){
@@ -79,7 +83,7 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
     } else {
       const queso = JSON.parse(storage)
     
-      if(queso.filter( (q: MarkTypes) => (q.id === body.id) ).length < 1){
+      if(queso.filter( (q: arrayCollection) => (q.id === body.id && q.name === body.name) ).length < 1){
         queso.push(body)
         sessionStorage.setItem("cart_list", JSON.stringify(queso));
       } else {
@@ -91,7 +95,7 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
     if(storage ==  null) {
     } else {
       const collection = JSON.parse(storage)
-      const items = collection.filter( (q: any) => (q.id === genres.id) )
+      const items = collection.filter( (q: any) => (q.id === genres.id && q.name === genres.name) )
       for(const i of items){
         setCartClicked(true)
       }
@@ -107,7 +111,7 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
               <Link href={`/marks/${genres.name}`}>
                 <Card.Header style={{ backgroundColor: '#ffff', fontFamily: 'Garamond',fontWeight: 'bold', color: '#000000' }}>{genres.name}</Card.Header>
               </Link>
-              <Card.Img variant="top" src={genres.image} style={{ minHeight: '15rem' }} />
+              <Card.Img variant="top" src={genres.img} style={{ minHeight: '15rem' }} />
               <Card.Body>
                 <Row className='d-flex justify-content-end'>
                   <Col xs='2' className='d-flex'>
@@ -144,7 +148,7 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
                   </Col>
                 </Row>
                 <Card.Text>
-                  <strong>{ genres.name } :</strong> {genres.desc}
+                  <strong>{ genres.name } :</strong> {genres.marca}
                 </Card.Text>
               </Card.Body>
             </Card>

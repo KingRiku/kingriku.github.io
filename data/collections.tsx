@@ -1,71 +1,154 @@
 export const collections = [
   {
+    name: 'Gucci',
     image:[
       {
-        name: 'verano',
-        image: 'https://www.allureville.com/include_html/special/20220601_allureville/images/img_06.jpg',
-        year: '2022'
-      }
-    ]
-  },
-  {
-    image:[
-      {
-        name: 'invierno 1',
-        image: 'http://img.alicdn.com/img/bao/uploaded/i4/i2/441782853/O1CN01brwmS01WwijrRPDx3_!!441782853.jpg_q50s50.jpg',
-        year: '2022'
+        id: 1,
+        name: 'Gucci',
+        fname: 'gucci',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1KDis5Q6dXF0PXK1wKuIZJE6J3FPEjnLA',
+        desc: 'Resort',
+        year: '2023'
       },
       {
-        name: 'invierno 2',
-        image: 'http://img.alicdn.com/img/bao/uploaded/i4/i2/441782853/O1CN01brwmS01WwijrRPDx3_!!441782853.jpg_q50s50.jpg',
-        year: '2022'
-      },
-    ]
-  },
-  {
-    image:[
-      {
-        name: 'otoño 1',
-        image: 'https://www.allureville.com/include_html/special/20220601_allureville/images/img_07.jpg',
-        year: '2022'
-      },
-      {
-        name: 'otoño 2',
-        image: 'https://www.allureville.com/include_html/special/20220601_allureville/images/img_07.jpg',
-        year: '2022'
-      },
-      {
-        name: 'otoño 3',
-        image: 'https://www.allureville.com/include_html/special/20220601_allureville/images/img_07.jpg',
-        year: '2022'
+        id: 2,
+        name: 'Gucci',
+        fname: 'gucci',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1MYtHbMFzeQ4RtfSMyaazd_jSjaEgu796',
+        desc: 'Resort',
+        year: '2023'
       },
     ]
   },
   {
+    name: 'Louis Vuitton',
     image:[
       {
-        name: 'primavera',
-        image: 'https://baseec-img-mng.akamaized.net/images/item/origin/fa79d698abbda925a67a1a7af6cc40cc.jpg?imformat=generic',
-        year: '2022'
-      }
+        id: 1,
+        name: 'Louis Vuitton',
+        fname: 'luisvutton',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1fopXJEhitsTHAXnm9OYR-BdBfDCIOcT6',
+        desc: 'Spring ready to wear',
+        year: '2023'
+      },
+      {
+        id: 2,
+        name: 'Louis Vuitton',
+        fname: 'luisvutton',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=17FRO1vQ20zACK94-iMNjSu58JDTL-xUH',
+        desc: 'Spring ready to wear',
+        year: '2023'
+      },
+      {
+        id: 3,
+        name: 'Louis Vuitton',
+        fname: 'luisvutton',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=11u8lRx_VN1q2hW_FHSYvd4uVz63dXijp',
+        desc: 'Spring ready to wear',
+        year: '2023'
+      },
     ]
   },
-  // {
-  //   image:[
-  //     {
-  //       name: 'otoño',
-  //       image: 'https://baseec-img-mng.akamaized.net/images/item/origin/fa79d698abbda925a67a1a7af6cc40cc.jpg?imformat=generic',
-  //       year: '2022'
-  //     }
-  //   ]
-  // },
-  // {
-  //   image:[
-  //     {
-  //       name: 'otoño',
-  //       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUJMD51X2ilUjoohwvek3tXMnK16w9cyIVZbZB0-e3g2slONeZFLYIXPsRHeF4umLktvs&usqp=CAU',
-  //       year: '2022'
-  //     }
-  //   ]
-  // },
+  {
+    name: 'Dior',
+    image:[
+      {
+        id: 1,
+        name: 'Dior',
+        fname: 'dior',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1xf6frQ7kmNiYJzAzp99JMXWasu5HpNQ8',
+        desc: 'Christian Dior Spring ready to wear',
+        year: '2023'
+      },
+      {
+        id: 2,
+        name: 'Dior',
+        fname: 'dior',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=17k0MpGmCzM6jQxclbQwIaY-2bSQRZp1m',
+        desc: 'Christian Dior Spring ready to wear',
+        year: '2023'
+      },
+      {
+        id: 3,
+        name: 'Dior',
+        fname: 'dior',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1ua57P-nbq5CQ5NAxpZ4P3A5P8eON1ney',
+        desc: 'Christian Dior Spring ready to wear',
+        year: '2023'
+      },
+    ]
+  },
+  {
+    name: 'Givenchy',
+    image:[
+      {
+        id: 1,
+        name: 'Givenchy',
+        fname: 'givenchy',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1upqC6iQ2RP4rNmThtsfsBTTyx0Ff4tTH',
+        desc: 'Givenchy pre-fall',
+        year: '2023'
+      },
+      {
+        id: 2,
+        name: 'Givenchy',
+        fname: 'givenchy',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1pB72KGXdBmqZi1EHvagvzoB9HSRLNV2f',
+        desc: 'Givenchy pre-fall',
+        year: '2023'
+      },
+      {
+        id: 3,
+        name: 'Givenchy',
+        fname: 'givenchy',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1vlBDa0od5IE-CmM3e2JxAWzDvoRkF5w8',
+        desc: 'Givenchy pre-fall',
+        year: '2023'
+      },
+    ]
+  },
+  {
+    name: 'Chanel',
+    image:[
+      {
+        id: 1,
+        name: 'Chanel',
+        fname: 'chanel',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1Vl5tLxDcnq9fdh5k7MbUTMXw06RJtDuR',
+        desc: ' pre-fall',
+        year: '2023'
+      },
+      {
+        id: 2,
+        name: 'Chanel',
+        fname: 'chanel',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1bIjxOFghgvJazw31C0RVkyNhwPUJ_uI0',
+        desc: ' pre-fall',
+        year: '2023'
+      },
+      {
+        id: 3,
+        name: 'Chanel',
+        fname: 'chanel',
+        fav: false,
+        image: 'https://drive.google.com/uc?export=view&id=1Hnh8czJbBnbqRdrof-xMBXLcnMVwc_6y',
+        desc: ' pre-fall',
+        year: '2023'
+      },
+    ]
+  },
+ 
 ]
