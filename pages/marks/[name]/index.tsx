@@ -80,7 +80,7 @@ const MarksList = () => {
       <Container>
         <Row>
           <Col xs='12' className="d-flex justify-content-center mt-3 mb-2">
-            <h6><strong>{name}</strong></h6>
+            <h5 style={{ fontWeight: 'bold'}}>{name}</h5>
           </Col>
           {/* <Col xs='12' className="mb-3">
             <input

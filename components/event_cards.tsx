@@ -81,13 +81,13 @@ const EventCards: FC<genresProps> = ({ genres }) => {
                     type='button'
                     style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}
                     onClick={() => onHeartClick(genres)}>
-                    {clicked ? <FontAwesomeIcon style={{ color: '#EE5EC7' }} size='lg' icon={faHeart} />: <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faHeart} />}
+                    {clicked ? <FontAwesomeIcon style={{ color: '#7EBBD5' }} size='lg' icon={faHeart} />: <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faHeart} />}
                     {/* <Icon name={`${clicked ? "heart-fill" : "heart"}`}></Icon> */}
                   </Button>
                   </Col>
                 </Row>
                 <Card.Text>
-                  <strong>{ genres.name } :</strong> {genres.desc}
+                  <p><strong>{ genres.name } :</strong> {genres.desc}</p>
                 </Card.Text>
               </Card.Body>
             </Card>

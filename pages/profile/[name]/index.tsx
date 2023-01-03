@@ -11,37 +11,27 @@ const Favourites = () => {
   const [marcas, setMarcas] = useState<any[]>([])
   const [marks, setMarks] = useState<any[]>([])
 
-  const script = async () => {
-    const marks = await (JSON.parse(localStorage.getItem('marks') as string) ?? '')
-    setMarks(marks)
-  }
-
-  useEffect(() => {
-    script()
-  }, [])
-
   useEffect(() => {
     let bedy = []
     const storageMarks = sessionStorage.getItem("Artist_list");
     const storage = JSON.parse(storageMarks ?? '')
     console.log(storage)
     for (const sto of storage) {
-      for(let mar of marks) {
         for(let gen of genres){
-          if(gen.fname == mar.name && gen.id === sto.id) {
+          console.log(gen)
+          if(gen.name == sto.name && gen.id === sto.id) {
             bedy.push(gen)
           }
-        }
       }
     }
     setMarcas(bedy)
-  }, [name])
+  }, [])
   return (
     <Layout>
       <Container>
         <Row>
           <Col xs='12' className='d-flex justify-content-center mb-1 mt-3'>
-            {name}
+            <h5>{name}</h5>
           </Col>
         </Row>
       {

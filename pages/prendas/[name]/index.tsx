@@ -33,7 +33,7 @@ const Favourites = () => {
       <Container>
         <Row>
           <Col xs='12' className='d-flex justify-content-center mb-1 mt-3'>
-            {name}
+            <h5 style={{ fontWeight: 'bold' }}>{name}</h5>
           </Col>
         </Row>
       {

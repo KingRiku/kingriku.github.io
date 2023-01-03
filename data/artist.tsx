@@ -14,7 +14,7 @@ export const artist = [
       'luisvutton'
     ],
     marcas: [
-      'Luis vutton'
+      'Louis Vutton'
     ]
   },
   {
@@ -32,7 +32,7 @@ export const artist = [
       'burbery',
     ],
     marcas: [
-      'Burbery',
+      'Burberry',
     ]
   },
   {

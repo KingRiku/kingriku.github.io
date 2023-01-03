@@ -30,7 +30,7 @@ const ShopingBar = () => {
       <Container className='mt-3 pt-3' style={{height: '80vh', overflowY: 'scroll'}}>
         <Row>
           <Col xs='12' className='pt-3 d-flex justify-content-center'>
-            <h4><strong>Carrito de compras</strong></h4>
+            <h5 style={{ fontWeight: 'bold'}}>Carrito de compras</h5>
           </Col>
         </Row>
         <Row className='mb-3'>

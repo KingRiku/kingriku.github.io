@@ -58,7 +58,7 @@ const Home = () => {
           </Row>
           <Row>
             <Col xs='12' sm='12' md='12' lg='12' className='d-flex justify-content-center mb-2'>
-              <h5 style={{ fontWeight: 'bold'}}>Marcas</h5>
+              <h5 style={{ fontWeight: 'bold',}}>Marcas</h5>
             </Col>
           </Row>
           <Row>
