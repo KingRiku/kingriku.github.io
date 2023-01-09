@@ -18,7 +18,7 @@ const NewComponent: FC<checkboxProp> = ({checkerbox}) => {
   
     return (
       <Fragment>
-        <Col className="col-sm-3 shadow">
+        <Col xs='12' sm='12' mg='12' lg='12' className="shadow">
           <div className="quiz_card_area">
             <Field className="quiz_checkbox" type="checkbox" name={checkerbox.fname} id={checkerbox.id}/>
             <div className="single_quiz_card">

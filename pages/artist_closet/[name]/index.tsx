@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { FC, useEffect, useState } from 'react'
-import { Button, Card, Col, Container, Row } from 'react-bootstrap'
+import { Alert, Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { artist } from '../../../data/artist'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
@@ -65,55 +65,61 @@ const ArtistPage: FC<ILogo>  = () => {
   return (
     <Layout>
       {
-        closetByArtist.map((item: any, index: number) => (
-        <Container key={index}>
+        closetByArtist.length > 0 ?
+        <div>
           {
-            item.arrayImages.map((item: any, index: number) => (
-              <div key={index}>
-                <Row className='mt-3 mb-2'>
-                  <Col xs='12' lg='12' className='d-flex justify-content-center'>
-                  <h5><strong> {name}</strong></h5>
-                  </Col>
-                </Row>
-                <Row className='mb-3'>
-                  <Col xs='6'>
-                    <Card style={{minHeight: '10rem', maxHeight:'10rem'}}>
-                      <Card.Img className="object-cover"  src={item.img} style={{minHeight: '10rem', maxHeight:'10rem'}}></Card.Img>
-                    </Card>
-                  </Col>
-                  <Col xs='6' className='d-flex align-items-start'>
-                    <Row>
-                      <Col xs='12'>
-                        <p>marca: {item.marca}, Modelo: {item.model}</p>
+            closetByArtist.map((item: any, index: number) => (
+            <Container key={index}>
+              {
+                item.arrayImages.map((item: any, index: number) => (
+                  <div key={index}>
+                    <Row className='mt-3 mb-2'>
+                      <Col xs='12' lg='12' className='d-flex justify-content-center'>
+                      <h5><strong>{name}</strong> </h5>
+                      { item.name === 'BTS' ? <h5>.- {item.secondName}</h5> : null }
                       </Col>
-                      <Col xs='12'>
-                        <Link href={`/artist_closet/${name}/${index + 1}`}>
-                          <p>ver mas...</p>
-                        </Link>
-                      </Col>
-                      {/* <Col xs='6' className='d-flex'>
-                        <Button
-                          onClick={() => onHeartClick()}
-                          style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}>
-                            { clicked ? <FontAwesomeIcon style={{ color: '#7EBBD5' }} icon={faHeart} />: <FontAwesomeIcon style={{ color: '#000000' }} icon={faHeart} /> }
-                        </Button>
-                      </Col> 
-                      <Col xs='6' className='d-flex'>
-                        <Button
-                          onClick={() => onShopingClick()}
-                          style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}>
-                            { clickedShopping ? <FontAwesomeIcon style={{ color: '#EBD713' }} icon={faCartShopping} />: <FontAwesomeIcon style={{ color: '#000000' }} icon={faCartShopping} /> }
-                        </Button>
-                      </Col> */}
                     </Row>
-                  </Col>
-                </Row>
-                <hr style={{ border: '1px solid', color: '#EBD713' }}/>
-              </div>
-            ))
-          }
+                    <Row className='mb-3'>
+                      <Col xs='6'>
+                        <Card style={{minHeight: '10rem', maxHeight:'10rem'}}>
+                          <Card.Img className="object-cover"  src={item.img} style={{minHeight: '10rem', maxHeight:'10rem'}}></Card.Img>
+                        </Card>
+                      </Col>
+                      <Col xs='6' className='d-flex align-items-start'>
+                        <Row>
+                          <Col xs='12'>
+                            <p>Marca: {item.marca}. Modelo: {item.model}</p>
+                          </Col>
+                          <Col xs='12'>
+                            <Link href={`/artist_closet/${name}/${index + 1}`}>
+                              <p>ver mas...</p>
+                            </Link>
+                          </Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                    <hr style={{ border: '1px solid', color: '#EBD713' }}/>
+                  </div>
+                ))
+              }
+            </Container>
+          ))}
+        </div>:
+        <Container>
+          <Row style={{ height: '100vh'}}>
+            <Col xs ='12' sm='12' md='12' lg='12' className='d-flex align-items-center justify-content-center'>
+              <Row>
+                <Col lg='12' className='d-flex justify-content-center'>
+                  <h5><strong>Proximamente...</strong></h5>
+                </Col>
+                <Col lg='12'>
+                  <Alert variant='warning'>Estamos trabajando para ustedes...</Alert>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
         </Container>
-      ))}
+      }
     </Layout>
   )
 }

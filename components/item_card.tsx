@@ -31,7 +31,7 @@ const ItemCard: FC<itemsProps> = ({items}) => {
             <Card.Img src={otems?.img} style={{ maxHeight: '8rem', minHeight: '8rem' }}></Card.Img>
             {/* <Image src={otems?.image}></Image> */}
             <Card.Body className='d-flex justify-content-center' style={{ maxHeight: '2rem', minHeight: '2rem' }}>
-              <p>{otems?.name}</p>
+              <p >{otems?.marca.slice(0, 10)} ...</p>
             </Card.Body>
           </Card>
           <Col xs='4'className='pt-2 pb-2'>

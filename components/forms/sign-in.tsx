@@ -12,9 +12,6 @@ const SignIn = () => {
   return (
     <Container>
       <Row>
-        <Col>
-          <div>SignIn</div>
-        </Col>
         <Formik
               initialValues={{
                 email: '',

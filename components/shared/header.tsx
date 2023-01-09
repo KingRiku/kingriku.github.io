@@ -42,7 +42,7 @@ const Header = () => {
             </Link>
             <hr style={{ color: '#D555A6', fontWeight: 'bold' }}></hr>
             <Link href={'/re_sellers'}>
-              <h5 style={{ fontWeight: 'bold' ,padding: '1rem' }} className='d-flex justify-content-center'>Intercambio</h5>
+              <h5 style={{ fontWeight: 'bold' ,padding: '1rem' }} className='d-flex justify-content-center'>Venta Fan</h5>
             </Link>
             <hr style={{ color: '#D555A6', fontWeight: 'bold' }}></hr>
             <Link href={'/shopping_bar'}>

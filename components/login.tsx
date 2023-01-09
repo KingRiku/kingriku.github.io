@@ -7,11 +7,11 @@ const Login = () => {
   return (
     <Container>
       <Row>
-        <Col className='d-flex justify-content-center'>
+        <Col className='d-flex justify-content-center mt-3'>
           <h4>Login</h4>
         </Col>
       </Row>
-      <Row>
+      <Row className='mb-3'>
         <Col className='d-flex justify-content-center'>
           <Link href='/'>Iniciar sesión</Link>
         </Col>

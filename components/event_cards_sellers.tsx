@@ -1,11 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { ChangeEvent, FC, FormEvent, Fragment, useEffect, useLayoutEffect, useState } from 'react'
+import React, { FC, Fragment, useEffect, useState } from 'react'
 import { Card, Col, Row, Form, Button } from 'react-bootstrap'
-import { genres } from '../data/genres'
 import { faHeart, faCartShopping, faComment } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import { arrayCollection } from '../pages/artist_closet/[name]/[id]'
-// import { genres } from '../data/genres.json'
 
 export type MarkTypes = {
   id: number;
@@ -92,6 +90,7 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
   };
   useEffect(() => {
     const storage = sessionStorage.getItem("cart_list");
+    console.log('s', storage)
     if(storage ==  null) {
     } else {
       const collection = JSON.parse(storage)
@@ -101,14 +100,13 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
       }
     }
   }, [])
-  
   return (
     <Fragment>
       <Form>
         <Row>
           <Col xs='12' className='d-flex justify-content-center'>
             <Card style={{ width: '30rem' }} className='mb-2 shadow'>
-              <Link href={`/marks/${genres.name}`}>
+              <Link href={`/sellers_clothes/${genres.secondName}`}>
                 <Card.Header style={{ backgroundColor: '#ffff', fontFamily: 'Garamond',fontWeight: 'bold', color: '#000000' }}>{genres.name}</Card.Header>
               </Link>
               <Card.Img variant="top" src={genres.img} style={{ minHeight: '15rem' }} />
@@ -121,12 +119,7 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
                     style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}
                     onClick={() => onHeartClick(genres)}>
                     { clickedHeart ? <FontAwesomeIcon style={{ color: '#7EBBD5' }} icon={faHeart} />: <FontAwesomeIcon style={{ color: '#000000' }} icon={faHeart} /> }
-                    {/* <Icon name={`${clicked ? "heart-fill" : "heart"}`}></Icon> */}
                   </Button>
-                  {/* <HearthCheckbox genres={item.name}/> */}
-                  {/* <Link href='/collections_lists'>
-                      <FontAwesomeIcon style={{ color: '#EE5EC7' }} icon={faHeart} />
-                  </Link> */}
                   </Col>
                   <Col xs='2'>
                   <Link href='/comments'>
@@ -143,7 +136,6 @@ const EventCardsSellers: FC<genresProps> = ({ genres }) => {
                     style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}
                     onClick={() => onShoppingClick(genres)}>
                       { clicked ? <FontAwesomeIcon style={{ color: '#EBD713' }} size='lg' icon={faCartShopping} />: <FontAwesomeIcon style={{ color: '#000000' }} size='lg' icon={faCartShopping} /> }
-                      
                     </Button>
                   </Col>
                 </Row>

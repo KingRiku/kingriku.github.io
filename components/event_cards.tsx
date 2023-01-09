@@ -1,10 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { ChangeEvent, FC, FormEvent, Fragment, useEffect, useLayoutEffect, useState } from 'react'
+import React, {  FC,Fragment, useEffect, useState } from 'react'
 import { Card, Col, Row, Form, Button } from 'react-bootstrap'
-import { genres } from '../data/genres'
-import { faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
-import { collectionLiked } from '../pages/artist_closet/[name]/[id]'
 // import { genres } from '../data/genres.json'
 
 export type MarkTypes = {
@@ -87,7 +85,7 @@ const EventCards: FC<genresProps> = ({ genres }) => {
                   </Col>
                 </Row>
                 <Card.Text>
-                  <p><strong>{ genres.name } :</strong> {genres.desc}</p>
+                  <p><strong>{ genres.name }</strong> {genres.desc}</p>
                 </Card.Text>
               </Card.Body>
             </Card>

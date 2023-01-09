@@ -1,8 +1,9 @@
 import React, { FC, Fragment } from 'react'
-import { Button, Card, Col, Container, Image, Row } from 'react-bootstrap'
+import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { Field } from 'formik'
+import Image from 'next/image'
 
 export type FavouriteArtist = {
   name: string,
@@ -25,7 +26,8 @@ const SideCard: FC<FavouriteArtistProps> = ({ selections }) => {
       <Container fluid>
         <Row>
           <div className="card flex-row mb-22 shadow pt-2 pb-2">
-            <img className="card-img-left example-card-img-responsive" src={selections.image[0]?.img} style={{width: '10rem', height: '10rem'}}/>
+            <Image src={selections.image[0]?.img} alt="me" width="130" height="130" />
+            {/* <Image className="image-responsive" src={selections.image[0]?.img} style={{width: '10rem', maxHeight: '10rem', minHeight: '10rem' }}/> */}
             <div className="card-body">
               <h4 className="card-title h5 h4-sm">{selections.name}</h4>
               <p className="card-text">{selections.marcas.join(', ')}</p>

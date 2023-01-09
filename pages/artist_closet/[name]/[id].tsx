@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { use, useEffect, useLayoutEffect, useState } from 'react'
-import { Button, Card, Col, Row } from 'react-bootstrap'
+import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { artist } from '../../../data/artist'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
@@ -32,8 +32,10 @@ export type arrayCollection = {
   id: number;
   name: string;
   marca: string;
+  secondName?: string,
   model: string;
   img: string;
+  precio?: string
 }
 
 export type collectionLiked = {
@@ -141,35 +143,37 @@ const ClosetNumber = () => {
           <h5><strong> {name}</strong></h5>
         </Col>
       </Row>
-      <Row className='mb-3'>
-        <Col xs='6'>
-          <Card style={{minHeight: '10rem', maxHeight:'10rem'}}>
-            {/* <Card.Img src={first?.image.find(e => e.id === id)?.img}></Card.Img> */}
-            <Card.Img src={first[0]?.img} style={{ minHeight:'10rem', maxHeight:'10rem'}}></Card.Img>
-          </Card>
-        </Col>
-        <Col xs='6' className='d-flex align-items-start'>
-          <Row>
-            <Col xs='12'>
-              <p>Marca {first[0]?.marca}, colección {first[0]?.model}</p>
-            </Col>
-            <Col xs='6' className='d-flex'>
+      <Container style={{ backgroundColor: '#ffff' }} className=' pt-3 pb-1 shadow'>
+        <Row className='mb-3' >
+          <Col xs='6'>
+            <Card style={{minHeight: '10rem', maxHeight:'10rem'}}>
+              {/* <Card.Img src={first?.image.find(e => e.id === id)?.img}></Card.Img> */}
+              <Card.Img src={first[0]?.img} style={{ minHeight:'10rem', maxHeight:'10rem'}}></Card.Img>
+            </Card>
+          </Col>
+          <Col xs='6' className='d-flex align-items-start'>
+            <Row>
+              <Col xs='12'>
+                <p>Marca: {first[0]?.marca}. Colección: {first[0]?.model}. <br/> Valor: {first[0]?.precio}</p>
+              </Col>
+              <Col xs='6' className='d-flex'>
+                <Button
+                  onClick={() => onHeartClick()}
+                  style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}>
+                    { clicked ? <FontAwesomeIcon style={{ color: '#7EBBD5' }} icon={faHeart} />: <FontAwesomeIcon style={{ color: '#000000' }} icon={faHeart} /> }
+                </Button>
+              </Col>
+              <Col xs='6' className='d-flex'>
               <Button
-                onClick={() => onHeartClick()}
-                style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}>
-                  { clicked ? <FontAwesomeIcon style={{ color: '#7EBBD5' }} icon={faHeart} />: <FontAwesomeIcon style={{ color: '#000000' }} icon={faHeart} /> }
-              </Button>
-            </Col>
-            <Col xs='6' className='d-flex'>
-            <Button
-                onClick={() => onShoppingClick(first[0])}
-                style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}>
-                  { cartClicked ? <FontAwesomeIcon style={{ color: '#EBD713' }} icon={faCartShopping} />: <FontAwesomeIcon style={{ color: '#000000' }} icon={faCartShopping} /> }
-              </Button>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+                  onClick={() => onShoppingClick(first[0])}
+                  style={{backgroundColor: 'transparent', borderColor: 'transparent', padding: '0'}}>
+                    { cartClicked ? <FontAwesomeIcon style={{ color: '#EBD713' }} icon={faCartShopping} />: <FontAwesomeIcon style={{ color: '#000000' }} icon={faCartShopping} /> }
+                </Button>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
       <hr style={{ border: '1px solid', color: '#EBD713' }}/>
     </Layout>
   )

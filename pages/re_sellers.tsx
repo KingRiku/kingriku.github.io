@@ -26,7 +26,11 @@ const Home = () => {
     let body = []
     for(const clo of clothes){
       if(clo.fname === 'Sellers'){
-        body.push(clo)
+        for(let c of clo.arrayImages){
+          if(c.id === 1 || c.id === 2 || c.id === 3) {
+            body.push(c)
+          }
+        }
       }
     }
     setSellers(body)
@@ -47,13 +51,13 @@ const Home = () => {
           {
             sellers.map((item, index) => (
               <Row key={index}>
-                {
-                  item.arrayImages.map((item: arrayCollection, index: number) => (
+                {/* {
+                  item.map((item: arrayCollection, index: number) => ( */}
                     <Col xs='12' lg='12' key={index}>
                       <EventCardsSellers genres={item} />
                     </Col>
-                  ))
-                }
+                  {/* ))
+                } */}
               </Row>
               ))
             }

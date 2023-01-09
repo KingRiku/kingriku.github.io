@@ -43,7 +43,7 @@ const
         >
           <Col xs='4' className='d-flex align-items-center'>
             <Link href={`/prendas/Prendas Favoritos`}>
-              <h5>Prendas Favoritos</h5>
+              <h5><strong>Prendas Favoritos</strong></h5>
             </Link>
           </Col>
           <Col xs='8'>

@@ -8,24 +8,24 @@ export const clothes = [
         name: 'Billie Eilish',
         fname: 'billieeilish',
         marca: 'burbery',
-        model: '2019',
-        img: 'https://drive.google.com/uc?export=view&id=1hxAY3uiRszrwPo6CommWudHWecZqQ-uG'
+        model: 'Zapatillas Burberry',
+        img: '/billie/billie AMA 2019 red carpet outfit completo.png'
       },
       {
         id: 2,
         name: 'Billie Eilish',
         fname: 'billieeilish',
         marca: 'skoot',
-        model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=10nKQpsTv4OdQqNsBP4zvH8u3m1C__Xxb'
+        model: 'Polera Skoot',
+        img: '/billie/billie racing logo t-shirt 2019 insta.jpg'
       },
       {
         id: 3,
         name: 'Billie Eilish',
         fname: 'billieeilish',
         marca: 'Adidas',
-        model: '2022',
-        img: 'https://drive.google.com/uc?export=view&id=1_j3WmaSGWxdX9WXNcLMSwu5kv4iYDDfy'
+        model: 'Zapatillas Adidas',
+        img: '/billie/billie nike collaboration 2022.png'
       },
     ],
     "arrayImages":[
@@ -33,25 +33,31 @@ export const clothes = [
         id: 1,
         name: 'Billie Eilish',
         fname: 'billieeilish',
+        secondName: 'Billie Eilish',
         marca: 'burbery',
         model: '2019',
-        img: 'https://drive.google.com/uc?export=view&id=19vmrKhGptIvuLtTLv3tUumXxZY-jUVnq'
+        precio: '$815.800 CLP',
+        img: '/billie/billie.png'
       },
       {
         id: 2,
         name: 'Billie Eilish',
+        secondName: 'Billie Eilish',
         fname: 'billieeilish',
         marca: 'skoot',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1XPwnnSGJYmZNTeQB0BmgejQ8mxwjh2sh'
+        precio: '$10.400 CLP',
+        img: '/billie/billie racing logo t-shirt merch 10.400 CLP.png'
       },
       {
         id: 3,
         name: 'Billie Eilish',
         fname: 'billieeilish',
+        secondName: 'Billie Eilish',
         marca: 'Adidas',
         model: '2022',
-        img: 'https://drive.google.com/uc?export=view&id=1OlWToOIlLmIba9besyGe-L4I8-Iw_7bh'
+        precio: '$112.800 CLP',
+        img: '/billie/billie x nike collab 2022 zapatillas 112.800 CLP.png'
       },
     ]
   },
@@ -64,16 +70,16 @@ export const clothes = [
         name: 'Bad Bunny',
         fname: 'badbunny',
         marca: 'gucci',
-        model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=10JtdvlKcNbbQKOA136n2qlyi9qGvkCZg'
+        model: 'Chaqueta Gucci',
+        img: '/badbunny/Bad bunny chaqueta gucci.png'
       },
       {
         id: 2,
         name: 'Bad Bunny',
         fname: 'badbunny',
         marca: 'jacques marie',
-        model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=17GJiiTXbv7rPAgahXQMrHCaT5oOEg9K4'
+        model: 'Lentes Jacques Marie',
+        img: '/badbunny/bad bunny lentes jacques marie mage.png'
       },
     ],
     "arrayImages":[
@@ -81,17 +87,21 @@ export const clothes = [
         id: 1,
         name: 'Bad Bunny',
         fname: 'badbunny',
+        secondName: 'Bad Bunny',
         marca: 'gucci',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1p6uQPpILG8UlfGDk9J5dbEsLhnT8i31b'
+        precio: '$2700 USD',
+        img: '/badbunny/Chaqueta gucci 2.700 dolares.png'
       },
       {
         id: 2,
         name: 'Bad Bunny',
         fname: 'badbunny',
+        secondName: 'Bad Bunny',
         marca: 'jacques marie',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1_w4q4AojJSnNNvTswxd0ACo9YobFhigr'
+        precio: '$895 USD',
+        img: '/badbunny/lentes jacques marie mage 895 dolares.png'
       },
     ]
   },
@@ -104,50 +114,180 @@ export const clothes = [
         name: 'Harry Styles',
         fname: 'harrystyles',
         marca: 'gucci',
-        model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1szwJB_xkp-YJL6nKl0jA-AR6TbWiacnQ'
+        model: 'Polera Gucci',
+        img: '/harrystyles/Harry styles 1 gucci ha ha ha outfit completo.png'
       },
       {
         id: 2,
         name: 'Harry Styles',
         fname: 'harrystyles',
         marca: 'gucci',
-        model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1jsS2Rmbvr9g5I9hrsCJNdjmJylOQzWnG'
+        model: 'Polera Gucci',
+        img: '/harrystyles/harry styles 3 gucci ha ha ha outfit completo.png'
       },
       {
         id: 3,
         name: 'Harry Styles',
         fname: 'harrystyles',
         marca: 'gucci',
-        model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=10eQ_E2NoYwjKB-Ir0IjzivsS6KL0L88x'
+        model: 'Chaqueta Gucci',
+        img: '/harrystyles/chaqueta harry ha ha ha.png'
       },
     ],
     "arrayImages":[
       {
         id: 1,
         name: 'Harry Styles',
+        secondName: 'Harry Styles',
         fname: 'harrystyles',
         marca: 'gucci',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1_22AuG4S9t9XOQ600CREK25npvZe2ho1'
+        precio: '$443.000 CLP',
+        img: '/harrystyles/gucci 1 blusa coleccion ha ha ha 443.000 CLP.png'
       },
       {
         id: 2,
         name: 'Harry Styles',
+        secondName: 'Harry Styles',
         fname: 'harrystyles',
         marca: 'gucci',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=18QWdUINl5t0OuMtsfCQHHqhWjuN4xNH8'
+        precio: '$480.000 CLP',
+        img: '/harrystyles/gucci polera 3 coleccion ha ha ha 480.000 CLP.png'
       },
       {
         id: 3,
         name: 'Harry Styles',
+        secondName: 'Harry Styles',
         fname: 'harrystyles',
         marca: 'gucci',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=15yrP7qqPHYhoBPm-FVDgU7myXJhiGOCy'
+        precio: '$2.580.000 CLP',
+        img: '/harrystyles/gucci chaqueta 2 coleccion ha ha ha 2.580.000 CLP.png'
+      },
+    ]
+  },
+  {
+    "fname":"BTS",
+    "name":"bts",
+    "arrayCollection" :[
+      {
+        id: 1,
+        name: 'BTS',
+        fname: 'bts',
+        marca: 'supreme',
+        model: 'N/A',
+        img: '/bts/Jk supreme shirt insta 2022.jpg'
+      },
+      {
+        id: 2,
+        name: 'BTS',
+        fname: 'bts',
+        marca: 'VETEMENTS',
+        model: 'N/A',
+        img: '/bts/yoongi yet to come concert 2022.jpg'
+      },
+      {
+        id: 3,
+        name: 'BTS',
+        fname: 'bts',
+        marca: 'fila',
+        model: 'N/A',
+        img: '/bts/namjoon bts x fila parka.jfif'
+      },
+    ],
+    "arrayImages":[
+      {
+        id: 1,
+        name: 'BTS',
+        secondName: 'Jungkook',
+        fname: 'bts',
+        marca: 'Supreme',
+        model: 'N/A',
+        precio: '431.000 CLP',
+        img: '/bts/Supreme Snap-Off Sleeve Baseball Top Black jk 431.000 CLP.png'
+      },
+      {
+        id: 2,
+        name: 'BTS',
+        secondName: 'Suga',
+        fname: 'bts',
+        marca: 'VETEMENTS',
+        model: 'Yet to come',
+        precio: '470.000 CLP',
+        img: '/bts/VETEMENTS mens black flat earth t-shirt yet to come 2022 470.000 CLP.png'
+      },
+      {
+        id: 3,
+        name: 'BTS',
+        secondName: 'V',
+        fname: 'bts',
+        marca: 'Fila',
+        model: 'N/A',
+        precio: '215.000 CLP',
+        img: '/bts/parca fila x bts nam 215.000 CLP.png'
+      },
+    ]
+  },
+  {
+    "fname":"Beyonce",
+    "name":"beyonce",
+    "arrayCollection" :[
+      {
+        id: 1,
+        name: 'Beyonce',
+        fname: 'beyonce',
+        marca: '',
+        model: '',
+        img: '/beyonce/Chaqueta velvet beyonce.jpg'
+      },
+      {
+        id: 2,
+        name: 'Beyonce',
+        fname: 'beyonce',
+        marca: '',
+        model: '',
+        img: '/beyonce/rodeo collection 2021 pants f beyonce.jpg'
+      },
+      {
+        id: 3,
+        name: 'Beyonce',
+        fname: 'beyonce',
+        marca: '',
+        model: '',
+        img: '/beyonce/Leggings rojos beyonce.jpg'
+      },
+    ],
+    "arrayImages":[
+      {
+        id: 1,
+        name: 'Beyonce',
+        secondName: '',
+        fname: 'beyonce',
+        marca: 'Velvet',
+        model: 'N/A',
+        precio: '109.300 CLP',
+        img: '/beyonce/Chaqueta velvet poliester ivy park x adidas 109.300 CLP.png'
+      },
+      {
+        id: 2,
+        name: 'Beyonce',
+        secondName: '',
+        fname: 'beyonce',
+        marca: 'Adidas',
+        model: 'Rodeo collection',
+        precio: '223.000 CLP',
+        img: '/beyonce/Ivy park x adidas rodeo collection pantalones 223.000 CLP.png'
+      },
+      {
+        id: 3,
+        name: 'Beyonce',
+        secondName: '',
+        fname: 'beyonce',
+        marca: 'Adidas',
+        model: 'Ivy park x adidas',
+        precio: '109.000 CLP',
+        img: '/beyonce/leggings ivy park x adidas 109.000 CLP.png'
       },
     ]
   },
@@ -169,63 +309,79 @@ export const clothes = [
         name: 'Sellers',
         secondName: 'Billie Eilish',
         fname: 'billieeilish',
-        marca: 'N/A',
+        marca: 'Happier than ever con gorro',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1u_3E_f33EQrM_TD9vTfPdiDQ0RgMfIY7'
-      },
-      {
-        id: 2,
-        name: 'Sellers',
-        secondName: 'Billie Eilish',
-        fname: 'billieeilish',
-        marca: 'N/A',
-        model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1rVh3Kk7E5_L43QFm_Il7Grm7dzYihf4R'
-      },
-      {
-        id: 3,
-        name: 'Sellers',
-        secondName: 'Billie Eilish',
-        fname: 'billieeilish',
-        marca: 'N/A',
-        model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1y0kPXvqOeIUf0lyapRMmpPelr6QNDLoC'
+        img: '/sellers/billie poleron fanmade 1 27.000 CLP.png'
       },
       {
         id: 4,
         name: 'Sellers',
         secondName: 'Billie Eilish',
         fname: 'billieeilish',
-        marca: 'N/A',
+        marca: 'Happier than ever sin gorro',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1e-7wckzYcWeK4IqqmSEEyZvhLQ2aU_c5'
+        img: '/sellers/billie poleron fanmade 2 30.700 CLP .png'
       },
       {
         id: 5,
         name: 'Sellers',
+        secondName: 'Billie Eilish',
+        fname: 'billieeilish',
+        marca: 'Accesorios neon Billie Eilish',
+        model: 'N/A',
+        img: '/sellers/gorro y guantes billie handmade 21.530 CLP .png'
+      },
+      {
+        id: 2,
+        name: 'Sellers',
         secondName: 'Harry Styles',
         fname: 'harrystyles',
-        marca: 'gucci',
+        marca: 'Cardigan Patchwork',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1wH0OknCIA1brr37EZg8OF6dXPmgwtIiD'
+        img: '/sellers/cardigan harry handmade fan 1 59.800 CLP.png'
       },
       {
         id: 6,
         name: 'Sellers',
         secondName: 'Harry Styles',
         fname: 'harrystyles',
-        marca: 'gucci',
+        marca: 'Treat people with kindness',
         model: 'N/A',
-        img: 'https://drive.google.com/uc?export=view&id=1Rg5uYUmAdUnDV1Jt6OmH42eylboU2Kh-'
+        img: '/sellers/poleron harry 1 fanmade 24.900 CLP png.png'
       },
-      // {
-      //   id: 7,
-      //   name: 'Sellers',
-      //   secondName: 'Bad Bunny',
-      //   marca: 'gucci',
-      //   model: 'N/A',
-      //   img: 'https://drive.google.com/uc?export=view&id=18QWdUINl5t0OuMtsfCQHHqhWjuN4xNH8'
-      // },
+      {
+        id: 7,
+        name: 'Sellers',
+        secondName: 'Harry Styles',
+        fname: 'harrystyles',
+        marca: 'Polera oso gucci',
+        model: 'N/A',
+        img: '/sellers/polera fanmade harry 1 25.600 CLP.png'
+      },
+      {
+        id: 3,
+        name: 'Sellers',
+        secondName: 'BTS',
+        marca: 'Cardigan rkive',
+        model: 'N/A',
+        img: '/sellers/cardigan rkive fanmade 76.100 CLP.png'
+      },
+      {
+        id: 8,
+        name: 'Sellers',
+        secondName: 'BTS',
+        marca: 'Yet to come  merch',
+        model: 'N/A',
+        img: '/sellers/yet to come merch fanmade 2_ 35.900 CLP.png'
+      },
+      {
+        id: 9,
+        name: 'Sellers',
+        secondName: 'BTS',
+        marca: 'Bolso chimmy BT21',
+        model: 'N/A',
+        img: '/sellers/bolso chimmy bts handmade 1 20.000 CLP.png'
+      },
     ]
   },
 ]

@@ -12,18 +12,18 @@ export const MusicaStiles = [
     text: 'KPOP',
     fname: 'kpop'
   },
-  // {
-  //   id: '3',
-  //   value:'3',
-  //   text: 'R&B',
-  //   fname: 'ryb'
-  // },
   {
-    id: '4',
-    value:'4',
-    text: 'Hip-Hop',
-    fname: 'hiphop'
+    id: '3',
+    value:'3',
+    text: 'R&B',
+    fname: 'ryb'
   },
+  // {
+  //   id: '4',
+  //   value:'4',
+  //   text: 'Hip-Hop',
+  //   fname: 'hiphop'
+  // },
   {
     id: '5',
     value:'5',

@@ -7,7 +7,7 @@ export const artist = [
     image: [
       {
         id: "1",
-        img: 'https://drive.google.com/uc?export=view&id=1VTjDIo6t4ATA8ATwFnLEvi6LvG9AQBH0',
+        img: '/artist/gq korea bts.jfif',
       },
     ],
     fmarcas: [
@@ -25,7 +25,7 @@ export const artist = [
     image: [
       {
         id: "1",
-        img: 'https://drive.google.com/uc?export=view&id=1e-bcKIhHjAdTvozMsrmhc_sQH706LyF9',
+        img: '/artist/bad bunny.jpg',
       },
     ],
     fmarcas: [
@@ -43,7 +43,7 @@ export const artist = [
     image: [
       {
         id: "1",
-        img: 'https://drive.google.com/uc?export=view&id=193Q71VGm6bR1LMBdm5lUauPAYwvbivCi',
+        img: '/artist/billie.jpg',
       },
     ],
     fmarcas: [
@@ -61,7 +61,7 @@ export const artist = [
     image: [
       {
         id: "1",
-        img: 'https://drive.google.com/uc?export=view&id=1DhUx0S8gbByRQrqk44bZ7A9u9uwJd98n',
+        img: '/artist/harry.png',
       },
     ],
     fmarcas: [
@@ -90,42 +90,42 @@ export const artist = [
   //     'Dior'
   //   ]
   // },
-  // {
-  //   name: 'J Balbin',
-  //   genre: 'Reggaetón',
-  //   fname: 'jbalbin',
-  //   style: 'regaeton',
-  //   image: [
-  //     {
-  //       id: "1",
-  //       img: 'https://phantom-telva.unidadeditorial.es/afeeb165d0441de69c6189a9d6acd05f/resize/640/assets/multimedia/imagenes/2019/02/15/15502230510011.jpg',
-  //     },
-  //   ],
-  //   fmarcas: [
-  //     'chanel'
-  //   ],
-  //   marcas: [
-  //     'Chanel'
-  //   ]
-  // },
-  // {
-  //   name: 'The Weeknd',
-  //   genre: 'Pop',
-  //   fname: 'theweeknd',
-  //   style: 'pop',
-  //   image: [
-  //     {
-  //       id: "1",
-  //       img: 'https://www.latercera.com/resizer/MYALdQ3xOqHWXdd3e6yCjdbQ6b8=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/O4MKIYHI7BFI3FIGJQQZXJ4YZY.jpg',
-  //     },
-  //   ],
-  //   fmarcas: [
-  //     'puma',
-  //   ],
-  //   marcas: [
-  //     'Puma',
-  //   ]
-  // },
+  {
+    name: 'J Balbin',
+    genre: 'Reggaetón',
+    fname: 'jbalbin',
+    style: 'regaeton',
+    image: [
+      {
+        id: "1",
+        img: '/jbalbin/jbalvin.png',
+      },
+    ],
+    fmarcas: [
+      'luisvutton'
+    ],
+    marcas: [
+      'Louis Vutton'
+    ]
+  },
+  {
+    name: 'Beyonce',
+    genre: 'R&B',
+    fname: 'beyonce',
+    style: 'ryb',
+    image: [
+      {
+        id: "1",
+        img: '/beyonce/rodeo collection 2021 pants f beyonce.jpg',
+      },
+    ],
+    fmarcas: [
+      'adidas',
+    ],
+    marcas: [
+      'Adidas',
+    ]
+  },
   {
     name: 'Ariana Grande',
     genre: 'Pop',
@@ -134,7 +134,7 @@ export const artist = [
     image: [
       {
         id: "1",
-        img: 'https://drive.google.com/uc?export=view&id=1rKnl5OIGuR7nTkegpYIsyK3i9JSNH8Df',
+        img: '/artist/ariana.png',
       },
     ],
     fmarcas: [

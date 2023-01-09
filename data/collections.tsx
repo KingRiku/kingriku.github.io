@@ -7,7 +7,7 @@ export const collections = [
         name: 'Gucci',
         fname: 'gucci',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1KDis5Q6dXF0PXK1wKuIZJE6J3FPEjnLA',
+        image: '/gucci/IMG_6302.jpeg',
         desc: 'Resort',
         year: '2023'
       },
@@ -16,7 +16,7 @@ export const collections = [
         name: 'Gucci',
         fname: 'gucci',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1MYtHbMFzeQ4RtfSMyaazd_jSjaEgu796',
+        image: '/gucci/IMG_6303.jpeg',
         desc: 'Resort',
         year: '2023'
       },
@@ -30,7 +30,7 @@ export const collections = [
         name: 'Louis Vuitton',
         fname: 'luisvutton',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1fopXJEhitsTHAXnm9OYR-BdBfDCIOcT6',
+        image: '/louisvuitton/IMG_6284.jpeg',
         desc: 'Spring ready to wear',
         year: '2023'
       },
@@ -39,7 +39,7 @@ export const collections = [
         name: 'Louis Vuitton',
         fname: 'luisvutton',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=17FRO1vQ20zACK94-iMNjSu58JDTL-xUH',
+        image: '/louisvuitton/IMG_6285.jpeg',
         desc: 'Spring ready to wear',
         year: '2023'
       },
@@ -48,7 +48,7 @@ export const collections = [
         name: 'Louis Vuitton',
         fname: 'luisvutton',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=11u8lRx_VN1q2hW_FHSYvd4uVz63dXijp',
+        image: '/louisvuitton/IMG_6286.jpeg',
         desc: 'Spring ready to wear',
         year: '2023'
       },
@@ -62,7 +62,7 @@ export const collections = [
         name: 'Dior',
         fname: 'dior',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1xf6frQ7kmNiYJzAzp99JMXWasu5HpNQ8',
+        image: '/dior/IMG_6278.jpeg',
         desc: 'Christian Dior Spring ready to wear',
         year: '2023'
       },
@@ -71,7 +71,7 @@ export const collections = [
         name: 'Dior',
         fname: 'dior',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=17k0MpGmCzM6jQxclbQwIaY-2bSQRZp1m',
+        image: '/dior/IMG_6280.jpeg',
         desc: 'Christian Dior Spring ready to wear',
         year: '2023'
       },
@@ -80,7 +80,7 @@ export const collections = [
         name: 'Dior',
         fname: 'dior',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1ua57P-nbq5CQ5NAxpZ4P3A5P8eON1ney',
+        image: '/dior/IMG_6281.jpeg',
         desc: 'Christian Dior Spring ready to wear',
         year: '2023'
       },
@@ -94,7 +94,7 @@ export const collections = [
         name: 'Givenchy',
         fname: 'givenchy',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1upqC6iQ2RP4rNmThtsfsBTTyx0Ff4tTH',
+        image: '/givenchy/IMG-6500.JPG',
         desc: 'Givenchy pre-fall',
         year: '2023'
       },
@@ -103,7 +103,7 @@ export const collections = [
         name: 'Givenchy',
         fname: 'givenchy',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1pB72KGXdBmqZi1EHvagvzoB9HSRLNV2f',
+        image: '/givenchy/IMG-6497.JPG',
         desc: 'Givenchy pre-fall',
         year: '2023'
       },
@@ -112,7 +112,7 @@ export const collections = [
         name: 'Givenchy',
         fname: 'givenchy',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1vlBDa0od5IE-CmM3e2JxAWzDvoRkF5w8',
+        image: '/givenchy/IMG-6498.JPG',
         desc: 'Givenchy pre-fall',
         year: '2023'
       },
@@ -126,7 +126,7 @@ export const collections = [
         name: 'Chanel',
         fname: 'chanel',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1Vl5tLxDcnq9fdh5k7MbUTMXw06RJtDuR',
+        image: '/chanel/IMG-6502.JPG',
         desc: ' pre-fall',
         year: '2023'
       },
@@ -135,7 +135,7 @@ export const collections = [
         name: 'Chanel',
         fname: 'chanel',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1bIjxOFghgvJazw31C0RVkyNhwPUJ_uI0',
+        image: '/chanel/IMG-6506.JPG',
         desc: ' pre-fall',
         year: '2023'
       },
@@ -144,7 +144,7 @@ export const collections = [
         name: 'Chanel',
         fname: 'chanel',
         fav: false,
-        image: 'https://drive.google.com/uc?export=view&id=1Hnh8czJbBnbqRdrof-xMBXLcnMVwc_6y',
+        image: '/chanel/IMG-6507.JPG',
         desc: ' pre-fall',
         year: '2023'
       },

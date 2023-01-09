@@ -4,39 +4,39 @@ export const genres = [
     name: 'Gucci',
     fname: 'gucci',
     fav: false,
-    image: 'https://drive.google.com/uc?export=view&id=1KDis5Q6dXF0PXK1wKuIZJE6J3FPEjnLA',
-    desc: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,'
+    image: '/gucci/IMG_6302.jpeg',
+    desc: 'Guccio Gucci fundo su marca en el año 1920. Director creativo Alessandro Michele.'
   },
   {
     id: 2,
     name: 'Louis Vuitton',
     fname: 'luisvutton',
     fav: false,
-    image: 'https://drive.google.com/uc?export=view&id=1fopXJEhitsTHAXnm9OYR-BdBfDCIOcT6',
-    desc: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,'
+    image: '/louisvuitton/IMG_6284.jpeg',
+    desc: 'Louis Vuitton Malletier fundo su marca en el año 1854. Director creativo Nicolas Ghesquière'
   },
   {
     id: 8,
     name: 'Dior',
     fname: 'dior',
     fav: false,
-    image: 'https://drive.google.com/uc?export=view&id=1xf6frQ7kmNiYJzAzp99JMXWasu5HpNQ8',
-    desc: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,'
+    image: '/dior/IMG_6278.jpeg',
+    desc: 'Christian Dior fundo su marca en el año 1946. Director creativo Maria Grazia Chiuri.'
   },
   {
     id: 5,
     name: 'Chanel',
     fname: 'chanel',
     fav: false,
-    image: 'https://drive.google.com/uc?export=view&id=1Vl5tLxDcnq9fdh5k7MbUTMXw06RJtDuR',
-    desc: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,'
+    image: '/chanel/IMG-6502.JPG',
+    desc: 'Coco Chanel fundo su marca en el año 1910, Director creativo Virginie Viard.'
   },
   {
     id: 7,
     name: 'Givenchy',
     fname: 'givenchy',
     fav: false,
-    image: 'https://drive.google.com/uc?export=view&id=1upqC6iQ2RP4rNmThtsfsBTTyx0Ff4tTH',
-    desc: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s,'
+    image: 'givenchy/IMG-6500.JPG',
+    desc: 'Hubert de Givenchy fundo su marca en el año 1952. Director creativo Clare Waight Keller.'
   },
 ]

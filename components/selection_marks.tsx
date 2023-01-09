@@ -13,7 +13,7 @@ type SelectionsGroup = {
   gucci?: boolean
   chanel?: boolean
   luisvutton?: boolean
-  puma?: boolean
+  adidas?: boolean
   givenchy?: boolean
   dior?: boolean
   skoot?: boolean
@@ -35,7 +35,7 @@ function SelectionMarks() {
           gucci: false,
           chanel: false,
           luisvutton: false,
-          puma: false,
+          adidas: false,
           givenchy: false,
           dior: false,
           skoot: false,
@@ -52,8 +52,8 @@ function SelectionMarks() {
           if(values.luisvutton == true){
             body.push({'name': 'luisvutton'})
           }
-          if(values.puma == true){
-            body.push({'name': 'puma'})
+          if(values.adidas == true){
+            body.push({'name': 'adidas'})
           }
           if(values.givenchy == true){
             body.push({'name': 'givenchy'})
@@ -87,8 +87,12 @@ function SelectionMarks() {
               ))
             }
           </Row>
+          <Row>
+            <Col xs='12' sm='12' mg='12' lg='12' className='d-flex justify-content-end'>
+              <Button variant='dark' type='submit'>Siguiente</Button>
+            </Col>
+          </Row>
         </Container>
-          <Button variant='dark' type='submit'>Siguiente</Button>
       </Form>
       )}
      </Formik>

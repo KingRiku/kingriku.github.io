@@ -84,7 +84,7 @@ const FollowedArtist: NextPage = () => {
       <Container>
         <Row>
           <Col xs='12' className="d-flex justify-content-center mb-2 mt-3">
-            <h5><strong>Artists</strong></h5>
+            <h5><strong>Artistas</strong></h5>
           </Col>
           <Col xs='12' className="mb-3">
             <input
@@ -97,35 +97,37 @@ const FollowedArtist: NextPage = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs='12'>
             {
               artistas.map((item, index) => (
-                <Slider {...settings} key={index} className='mb-5'>
-                  {
-                    item?.arrayCollection?.map((item: arrayCollection, index: number) => (
-                      <Card key={index}>
-                        <Card.Img src={item.img} style={{ minHeight: '20rem', maxHeight: '20rem' }} className='img-fluid' >
-                        </Card.Img>
-                        <Card.Body>
-                          <Card.Title className="d-flex justify-content-center">
-                            <p>
-                              Marca: {item.marca} <br/>
-                              Modelo: {item.model}
-                            </p>
-                          </Card.Title>
-                          <Card.Text className="d-flex justify-content-center">
-                            <Link href={`artist_closet/${item.name}/${item.id}`}>
-                              ver mas...
-                            </Link>
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    ))
-                  }
-                </Slider>
+                <Col xs='12' sm='12' md='12' lg='12'>
+                  <div className="d-flex justify-content-center">
+                    <h5><strong>{item.fname}</strong></h5>
+                  </div>
+                  <Slider {...settings} key={index} className='mb-5'>
+                    {
+                      item?.arrayCollection?.map((item: arrayCollection, index: number) => (
+                        <Card key={index}>
+                          <Card.Img src={item.img} style={{ minHeight: '20rem', maxHeight: '20rem' }} className='img-fluid' >
+                          </Card.Img>
+                          <Card.Body>
+                            <Card.Title className="d-flex justify-content-center">
+                              <p>
+                                {item.model}
+                              </p>
+                            </Card.Title>
+                            <Card.Text className="d-flex justify-content-center">
+                              <Link href={`artist_closet/${item.name}/${item.id}`}>
+                                ver mas...
+                              </Link>
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      ))
+                    }
+                  </Slider>
+                </Col>
               ))
             }
-          </Col>
         </Row>
       </Container>
     </Layout>

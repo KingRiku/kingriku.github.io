@@ -15,15 +15,15 @@ export const Marcas = [
   {
     id: '3',
     value:'3',
-    text: 'Luis Vutton',
+    text: 'Louis Vuitton',
     fname: 'luisvutton'
   },
-  // {
-  //   id: '4',
-  //   value:'4',
-  //   text: 'Puma',
-  //   fname: 'puma'
-  // },
+  {
+    id: '4',
+    value:'4',
+    text: 'Adidas',
+    fname: 'adidas'
+  },
   {
     id: '5',
     value:'5',
@@ -45,7 +45,7 @@ export const Marcas = [
   {
     id: '8',
     value:'8',
-    text: 'Burbery',
+    text: 'Burberry',
     fname: 'burbery'
   },
 ]

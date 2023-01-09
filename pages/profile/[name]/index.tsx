@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
@@ -43,6 +44,7 @@ const Favourites = () => {
                   <Card.Header style={{ backgroundColor: '#ffff', fontFamily: 'Garamond',fontWeight: 'bold', color: '#000000' }}>{item.name}</Card.Header>
                 </Link>
                 <Card.Img variant="top" src={item.image} style={{ minHeight: '15rem' }} />
+                {/* <Image src={item.image} alt='img' width='100' height={'100'} ></Image> */}
                 <Card.Body>
                   <Row className='d-flex justify-content-end'>
                     <Col xs='2' className='d-flex'>

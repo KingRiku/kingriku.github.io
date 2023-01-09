@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { Fragment, useEffect, useState } from "react";
-import { Card, Col, Container, Image, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import Layout from "../../../components/utils/layout";
 import { clothes } from "../../../data/artist_clothes";
@@ -11,7 +12,6 @@ import { collections } from "../../../data/collections";
 const MarksList = () => {
   const router = useRouter()
   const name = router.query.name as string
-  const [onSearchText, setSearchText] = useState('');
   const [collect , setCollect] = useState<any[]>([])
 
   // useEffect(() => {
@@ -61,9 +61,6 @@ const MarksList = () => {
       }
     ]
   };
-  const onFilterChange = (e: any) => {
-    setSearchText(e.target.value);
-  };
 
   useEffect(() => {
     let body = []
@@ -82,18 +79,9 @@ const MarksList = () => {
           <Col xs='12' className="d-flex justify-content-center mt-3 mb-2">
             <h5 style={{ fontWeight: 'bold'}}>{name}</h5>
           </Col>
-          {/* <Col xs='12' className="mb-3">
-            <input
-              type="text"
-              className="form-control"
-              id="default-04"
-              onChange={onFilterChange}
-              placeholder="Quick search by name"
-            />
-          </Col> */}
         </Row>
         <Row>
-          <Col xs='12'>
+          <Col xs='12' lg='12'>
               {
                 collect.map((item, index) =>(
                   <Slider {...settings} key={index} className='mb-5'>

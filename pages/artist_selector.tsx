@@ -1,12 +1,10 @@
 import { Form, Formik } from 'formik'
 import { NextPage } from 'next'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { Fragment, useEffect, useLayoutEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import SideCard from '../components/side_card'
 import { artist } from '../data/artist'
-import { Marcas } from '../data/marcas'
 
 type SelectionsGroup = {
   bts: boolean
@@ -15,7 +13,7 @@ type SelectionsGroup = {
   harrystyles: boolean
   maneskin: boolean
   jbalbin: boolean
-  theweeknd: boolean
+  beyonce: boolean
   arianagrande: boolean
 }
 
@@ -44,13 +42,6 @@ const ArtistSelector: NextPage = () => {
 
   useEffect(() => {
     let body = []
-    // for(let cos of marks) {
-    //   for(let art of artist){
-    //     if(art.fmarcas == cos.name) {
-    //       body.push(art)
-    //     }
-    //   }
-    // }
     for(let cos of marks) {
       for(let grp of groups) {
         for(let art of artist) {
@@ -79,7 +70,7 @@ const ArtistSelector: NextPage = () => {
           harrystyles: false,
           maneskin: false,
           jbalbin: false,
-          theweeknd: false,
+          beyonce: false,
           arianagrande: false,
         }}
         onSubmit= { async (values) => {
@@ -102,8 +93,8 @@ const ArtistSelector: NextPage = () => {
           if(values.jbalbin == true){
             body.push({'name': 'jbalbin'})
           }
-          if(values.theweeknd == true){
-            body.push({'name': 'theweeknd'})
+          if(values.beyonce == true){
+            body.push({'name': 'beyonce'})
           }
           if(values.arianagrande == true){
             body.push({'name': 'arianagrande'})
@@ -122,7 +113,7 @@ const ArtistSelector: NextPage = () => {
             <Row>
               {
                 artistas.map((item, index) => (
-                  <Col className='mb-3 mt-2' key={index}>
+                  <Col className='mb-3 mt-2' xs='12' sm='12' mg='6' lg='4' key={index}>
                     <SideCard selections={item} />
                   </Col>
                 ))
