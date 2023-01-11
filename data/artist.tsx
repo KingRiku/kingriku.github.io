@@ -37,9 +37,9 @@ export const artist = [
   },
   {
     name: 'Billie Eilish',
-    genre: 'Pop',
+    genre: 'Rap',
     fname: 'billieeilish',
-    style: 'pop',
+    style: 'rap',
     image: [
       {
         id: "1",

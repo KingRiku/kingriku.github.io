@@ -7,7 +7,7 @@ export const clothes = [
         id: 1,
         name: 'Billie Eilish',
         fname: 'billieeilish',
-        marca: 'burbery',
+        marca: 'Burbery',
         model: 'Zapatillas Burberry',
         img: '/billie/billie AMA 2019 red carpet outfit completo.png'
       },
@@ -15,7 +15,7 @@ export const clothes = [
         id: 2,
         name: 'Billie Eilish',
         fname: 'billieeilish',
-        marca: 'skoot',
+        marca: 'Skoot',
         model: 'Polera Skoot',
         img: '/billie/billie racing logo t-shirt 2019 insta.jpg'
       },
@@ -23,8 +23,8 @@ export const clothes = [
         id: 3,
         name: 'Billie Eilish',
         fname: 'billieeilish',
-        marca: 'Adidas',
-        model: 'Zapatillas Adidas',
+        marca: 'Nike',
+        model: 'Zapatillas Nike',
         img: '/billie/billie nike collaboration 2022.png'
       },
     ],
@@ -34,7 +34,7 @@ export const clothes = [
         name: 'Billie Eilish',
         fname: 'billieeilish',
         secondName: 'Billie Eilish',
-        marca: 'burbery',
+        marca: 'Burbery',
         model: '2019',
         precio: '$815.800 CLP',
         img: '/billie/billie.png'
@@ -44,7 +44,7 @@ export const clothes = [
         name: 'Billie Eilish',
         secondName: 'Billie Eilish',
         fname: 'billieeilish',
-        marca: 'skoot',
+        marca: 'Skoot',
         model: 'N/A',
         precio: '$10.400 CLP',
         img: '/billie/billie racing logo t-shirt merch 10.400 CLP.png'
@@ -54,7 +54,7 @@ export const clothes = [
         name: 'Billie Eilish',
         fname: 'billieeilish',
         secondName: 'Billie Eilish',
-        marca: 'Adidas',
+        marca: 'Nike',
         model: '2022',
         precio: '$112.800 CLP',
         img: '/billie/billie x nike collab 2022 zapatillas 112.800 CLP.png'
@@ -69,7 +69,7 @@ export const clothes = [
         id: 1,
         name: 'Bad Bunny',
         fname: 'badbunny',
-        marca: 'gucci',
+        marca: 'Gucci',
         model: 'Chaqueta Gucci',
         img: '/badbunny/Bad bunny chaqueta gucci.png'
       },
@@ -77,7 +77,7 @@ export const clothes = [
         id: 2,
         name: 'Bad Bunny',
         fname: 'badbunny',
-        marca: 'jacques marie',
+        marca: 'Jacques Marie',
         model: 'Lentes Jacques Marie',
         img: '/badbunny/bad bunny lentes jacques marie mage.png'
       },
@@ -88,7 +88,7 @@ export const clothes = [
         name: 'Bad Bunny',
         fname: 'badbunny',
         secondName: 'Bad Bunny',
-        marca: 'gucci',
+        marca: 'Gucci',
         model: 'N/A',
         precio: '$2700 USD',
         img: '/badbunny/Chaqueta gucci 2.700 dolares.png'
@@ -98,7 +98,7 @@ export const clothes = [
         name: 'Bad Bunny',
         fname: 'badbunny',
         secondName: 'Bad Bunny',
-        marca: 'jacques marie',
+        marca: 'Jacques Marie',
         model: 'N/A',
         precio: '$895 USD',
         img: '/badbunny/lentes jacques marie mage 895 dolares.png'
@@ -113,7 +113,7 @@ export const clothes = [
         id: 1,
         name: 'Harry Styles',
         fname: 'harrystyles',
-        marca: 'gucci',
+        marca: 'Gucci',
         model: 'Polera Gucci',
         img: '/harrystyles/Harry styles 1 gucci ha ha ha outfit completo.png'
       },
@@ -121,7 +121,7 @@ export const clothes = [
         id: 2,
         name: 'Harry Styles',
         fname: 'harrystyles',
-        marca: 'gucci',
+        marca: 'Gucci',
         model: 'Polera Gucci',
         img: '/harrystyles/harry styles 3 gucci ha ha ha outfit completo.png'
       },
@@ -129,7 +129,7 @@ export const clothes = [
         id: 3,
         name: 'Harry Styles',
         fname: 'harrystyles',
-        marca: 'gucci',
+        marca: 'Gucci',
         model: 'Chaqueta Gucci',
         img: '/harrystyles/chaqueta harry ha ha ha.png'
       },
@@ -140,8 +140,8 @@ export const clothes = [
         name: 'Harry Styles',
         secondName: 'Harry Styles',
         fname: 'harrystyles',
-        marca: 'gucci',
-        model: 'N/A',
+        marca: 'Gucci',
+        model: 'ha ha ha',
         precio: '$443.000 CLP',
         img: '/harrystyles/gucci 1 blusa coleccion ha ha ha 443.000 CLP.png'
       },
@@ -150,8 +150,8 @@ export const clothes = [
         name: 'Harry Styles',
         secondName: 'Harry Styles',
         fname: 'harrystyles',
-        marca: 'gucci',
-        model: 'N/A',
+        marca: 'Gucci',
+        model: 'ha ha ha',
         precio: '$480.000 CLP',
         img: '/harrystyles/gucci polera 3 coleccion ha ha ha 480.000 CLP.png'
       },
@@ -160,8 +160,8 @@ export const clothes = [
         name: 'Harry Styles',
         secondName: 'Harry Styles',
         fname: 'harrystyles',
-        marca: 'gucci',
-        model: 'N/A',
+        marca: 'Gucci',
+        model: 'ha ha ha',
         precio: '$2.580.000 CLP',
         img: '/harrystyles/gucci chaqueta 2 coleccion ha ha ha 2.580.000 CLP.png'
       },
@@ -193,7 +193,7 @@ export const clothes = [
         fname: 'bts',
         marca: 'fila',
         model: 'N/A',
-        img: '/bts/namjoon bts x fila parka.jfif'
+        img: '/bts/namjoon bts x fila parka.1.png'
       },
     ],
     "arrayImages":[
@@ -220,7 +220,7 @@ export const clothes = [
       {
         id: 3,
         name: 'BTS',
-        secondName: 'V',
+        secondName: 'RM',
         fname: 'bts',
         marca: 'Fila',
         model: 'N/A',
@@ -239,7 +239,7 @@ export const clothes = [
         fname: 'beyonce',
         marca: '',
         model: '',
-        img: '/beyonce/Chaqueta velvet beyonce.jpg'
+        img: '/beyonce/Chaqueta velvet beyonce.png'
       },
       {
         id: 2,
@@ -247,7 +247,7 @@ export const clothes = [
         fname: 'beyonce',
         marca: '',
         model: '',
-        img: '/beyonce/rodeo collection 2021 pants f beyonce.jpg'
+        img: '/beyonce/rodeo collection 2021 pants f beyonce.png'
       },
       {
         id: 3,
@@ -255,7 +255,7 @@ export const clothes = [
         fname: 'beyonce',
         marca: '',
         model: '',
-        img: '/beyonce/Leggings rojos beyonce.jpg'
+        img: '/beyonce/Leggings rojos beyonce.png'
       },
     ],
     "arrayImages":[
